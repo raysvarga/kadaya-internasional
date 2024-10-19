@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductCard = () => {
   return (
-    <div className="bg-white w-40 rounded-2xl drop-shadow-md p-3 pt-4 relative">
+    <div className="bg-white w-[145px] rounded-2xl drop-shadow-md p-3 pt-4 relative">
       <p className="bg-[#f7cd3c] w-fit rounded-full text-[10px] py-1 px-2 text-white absolute top-0 right-7 transform -translate-y-1/2 translate-x-1/2">
         Olahan Ikan
       </p>
