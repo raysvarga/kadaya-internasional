@@ -4,7 +4,7 @@ import logoTxt from "../../assets/img/logoTxt.png";
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center mx-5 mt-5">
       <div className="grow-0">
         <img src={logoTxt} alt="Arrum Samudra" />
       </div>
