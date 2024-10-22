@@ -4,6 +4,8 @@ import PartnerCard from "../atoms/PartnerCard";
 import Astra from "../../assets/img/astra.png";
 import KBA from "../../assets/img/kampung-berseri-astra.png";
 import Testimoni from "../atoms/Testimoni";
+import ContactCard from "../atoms/SocialMediaCard";
+import SocialMediaCard from "../atoms/SocialMediaCard";
 
 const AboutContainer = () => {
   const AboutIcon = (
@@ -87,8 +89,108 @@ const AboutContainer = () => {
       </g>
     </svg>
   );
+  const Instagram = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={64}
+      height={64}
+      fill="none"
+      viewBox="-4.8 -4.8 33.6 33.6"
+      className="w-10"
+    >
+      <rect
+        width={33.6}
+        height={33.6}
+        x={-4.8}
+        y={-4.8}
+        fill="#fff"
+        strokeWidth={0}
+        rx={16.8}
+      />
+      <g fill="#0795ff">
+        <path
+          fillRule="evenodd"
+          d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+          clipRule="evenodd"
+        />
+        <path d="M18 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z" />
+        <path
+          fillRule="evenodd"
+          d="M1.654 4.276C1 5.56 1 7.24 1 10.6v2.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C5.56 23 7.24 23 10.6 23h2.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C23 18.44 23 16.76 23 13.4v-2.8c0-3.36 0-5.04-.654-6.324a6 6 0 0 0-2.622-2.622C18.44 1 16.76 1 13.4 1h-2.8c-3.36 0-5.04 0-6.324.654a6 6 0 0 0-2.622 2.622ZM13.4 3h-2.8c-1.713 0-2.878.002-3.778.075-.877.072-1.325.202-1.638.361a4 4 0 0 0-1.748 1.748c-.16.313-.29.761-.36 1.638C3.001 7.722 3 8.887 3 10.6v2.8c0 1.713.002 2.878.075 3.778.072.877.202 1.325.361 1.638a4 4 0 0 0 1.748 1.748c.313.16.761.29 1.638.36.9.074 2.065.076 3.778.076h2.8c1.713 0 2.878-.002 3.778-.075.877-.072 1.325-.202 1.638-.361a4 4 0 0 0 1.748-1.748c.16-.313.29-.761.36-1.638.074-.9.076-2.065.076-3.778v-2.8c0-1.713-.002-2.878-.075-3.778-.072-.877-.202-1.325-.361-1.638a4 4 0 0 0-1.748-1.748c-.313-.16-.761-.29-1.638-.36C16.278 3.001 15.113 3 13.4 3Z"
+          clipRule="evenodd"
+        />
+      </g>
+    </svg>
+  );
+  const Whatsapp = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={64}
+      height={64}
+      fill="#0795ff"
+      viewBox="-6.4 -6.4 44.8 44.8"
+      className="w-10"
+    >
+      <rect
+        width={44.8}
+        height={44.8}
+        x={-6.4}
+        y={-6.4}
+        fill="#fff"
+        strokeWidth={0}
+        rx={22.4}
+      />
+      <title>{"whatsapp"}</title>
+      <path d="M26.576 5.363a14.818 14.818 0 0 0-10.511-4.354C7.856 1.009 1.2 7.664 1.2 15.874c0 2.732.737 5.291 2.022 7.491l-.038-.07-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h.006c8.209-.003 14.862-6.659 14.862-14.868a14.82 14.82 0 0 0-4.349-10.507zM16.062 28.228h-.006c-2.319 0-4.489-.64-6.342-1.753l.056.031-.451-.267-4.675 1.227 1.247-4.559-.294-.467a12.23 12.23 0 0 1-1.889-6.565c0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353-5.53 12.353-12.353 12.353zm6.776-9.251c-.371-.186-2.197-1.083-2.537-1.208-.341-.124-.589-.185-.837.187-.246.371-.958 1.207-1.175 1.455-.216.249-.434.279-.805.094a10.23 10.23 0 0 1-2.997-1.852l.01.009a11.236 11.236 0 0 1-2.037-2.521l-.028-.052c-.216-.371-.023-.572.162-.757.167-.166.372-.434.557-.65.146-.179.271-.384.366-.604l.006-.017a.678.678 0 0 0-.033-.653l.002.003c-.094-.186-.836-2.014-1.145-2.758-.302-.724-.609-.625-.836-.637-.216-.01-.464-.012-.712-.012-.395.01-.746.188-.988.463l-.001.002a4.153 4.153 0 0 0-1.299 3.102v-.004a7.233 7.233 0 0 0 1.527 3.857l-.012-.015a16.693 16.693 0 0 0 6.251 5.564l.094.043c.548.248 1.25.513 1.968.74l.149.041a5.103 5.103 0 0 0 2.368.143l-.031.004a3.837 3.837 0 0 0 2.497-1.749l.009-.017a3.122 3.122 0 0 0 .214-1.784l.003.019c-.092-.155-.34-.247-.712-.434z" />
+    </svg>
+  );
+  const TikTok = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={64}
+      height={64}
+      fill="#0795ff"
+      viewBox="-6.4 -6.4 44.8 44.8"
+      className="w-10"
+    >
+      <rect
+        width={44.8}
+        height={44.8}
+        x={-6.4}
+        y={-6.4}
+        fill="#fff"
+        strokeWidth={0}
+        rx={22.4}
+      />
+      <title>{"tiktok"}</title>
+      <path d="M16.656 1.029c1.637-.025 3.262-.012 4.886-.025a7.762 7.762 0 0 0 2.189 5.213l-.002-.002A8.77 8.77 0 0 0 29 8.45l.028.002v5.036a13.327 13.327 0 0 1-5.331-1.247l.082.034a15.385 15.385 0 0 1-2.077-1.196l.052.034c-.012 3.649.012 7.298-.025 10.934a9.513 9.513 0 0 1-1.707 4.954l.02-.031c-1.652 2.366-4.328 3.919-7.371 4.011h-.014a9.071 9.071 0 0 1-5.139-1.31l.04.023C5.05 28.185 3.32 25.603 3 22.6l-.004-.041a23.163 23.163 0 0 1-.012-1.862c.49-4.779 4.494-8.476 9.361-8.476.547 0 1.083.047 1.604.136l-.056-.008c.025 1.849-.05 3.699-.05 5.548a4.29 4.29 0 0 0-5.465 2.619l-.009.03c-.133.427-.21.918-.21 1.426 0 .206.013.41.037.61l-.002-.024a4.26 4.26 0 0 0 4.382 3.586h-.009a4.198 4.198 0 0 0 3.451-1.994l.01-.018c.267-.372.45-.822.511-1.311l.001-.014c.125-2.237.075-4.461.087-6.698.012-5.036-.012-10.06.025-15.083z" />
+    </svg>
+  );
+  const Email = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlSpace="preserve"
+      width={64}
+      height={64}
+      fill="#0795ff"
+      viewBox="-102.4 -102.4 716.8 716.8"
+      className="w-10"
+    >
+      <rect
+        width={716.8}
+        height={716.8}
+        x={-102.4}
+        y={-102.4}
+        fill="#fff"
+        strokeWidth={0}
+        rx={358.4}
+      />
+      <path d="M410.272 243.145c-3.63-4.486-10.211-5.179-14.695-1.548l-3.636 2.942c-4.485 3.631-5.177 10.211-1.546 14.696a10.43 10.43 0 0 0 8.128 3.875c2.309 0 4.634-.762 6.568-2.328l3.635-2.942c4.484-3.631 5.177-10.21 1.546-14.695zM380.363 267.357c-3.63-4.486-10.211-5.179-14.695-1.549l-74.708 59.674c-4.485 3.631-5.177 10.21-1.546 14.695a10.425 10.425 0 0 0 8.127 3.875 10.41 10.41 0 0 0 6.568-2.327l74.708-59.674c4.484-3.63 5.177-10.208 1.546-14.694z" />
+      <path d="M449.742 62.685H62.258C27.929 62.685 0 90.614 0 124.942v262.117c0 34.329 27.929 62.257 62.258 62.257h387.484c34.33 0 62.258-27.928 62.258-62.257V124.942c0-34.328-27.928-62.257-62.258-62.257zm-29.83 20.897L255.859 216.19 91.806 83.582h328.106zm8.214 344.836H83.592V184.382l165.712 133.49a10.45 10.45 0 0 0 13.11 0l165.711-133.49v244.036zm62.976-41.36c0 22.806-18.554 41.359-41.36 41.359h-.717v-265.87a10.447 10.447 0 0 0-17.004-8.137L255.859 296.318 79.697 154.41a10.448 10.448 0 0 0-17.004 8.137v265.87h-.436c-22.805.001-41.359-18.553-41.359-41.358V124.942c0-21.626 16.688-39.418 37.861-41.2l190.532 154.012a10.426 10.426 0 0 0 6.568 2.323c2.327 0 4.653-.774 6.568-2.323L452.983 83.721c21.295 1.66 38.119 19.507 38.119 41.22v262.117z" />
+    </svg>
+  );
   return (
-    <div className="pb-16">
+    <div className="pb-20">
       <AboutCard
         title="Tentang Arrum"
         svg={AboutIcon}
@@ -140,7 +242,7 @@ const AboutContainer = () => {
         bgColor="bg-white"
         fontColor="text-black"
       />
-      <div className="flex flex-col items-center bg-[#0795ff] p-3">
+      <div className="flex flex-col items-center bg-[#0795ff] py-5">
         <div className="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +283,7 @@ const AboutContainer = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col p-3">
+      <div className="flex flex-col py-5">
         <div className="flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -212,6 +314,70 @@ const AboutContainer = () => {
         </div>
         <div>
           <Testimoni />
+        </div>
+      </div>
+      <div>
+        <ContactCard />
+      </div>
+      <div className="bg-[#0795ff] py-3">
+        <div className="flex items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={64}
+            height={64}
+            fill="#0795ff"
+            stroke="#0795ff"
+            strokeWidth={0}
+            viewBox="-4.8 -4.8 33.6 33.6"
+            className="w-10 mr-2"
+          >
+            <rect
+              width={33.6}
+              height={33.6}
+              x={-4.8}
+              y={-4.8}
+              fill="#fff"
+              stroke="none"
+              rx={16.8}
+            />
+            <path
+              stroke="none"
+              d="M21 2H6a2 2 0 0 0-2 2v3H2v2h2v2H2v2h2v2H2v2h2v3a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zm-8 2.999c1.648 0 3 1.351 3 3A3.012 3.012 0 0 1 13 11c-1.647 0-3-1.353-3-3.001 0-1.649 1.353-3 3-3zM19 18H7v-.75c0-2.219 2.705-4.5 6-4.5s6 2.281 6 4.5V18z"
+            />
+          </svg>
+          <h2 className="text-xl font-bold text-white">Kontak</h2>
+        </div>
+        <div>
+          <div className="flex justify-center">
+            <p className="text-base mt-2 text-white text-center">
+              Alamat: MSTP Kampus UNDIP Jepara, Jalan UNDIP, Telukawur, Kec.
+              Tahunan, Kabupaten Jepara, Jawa Tengah 59427
+            </p>
+          </div>
+          <div className="flex justify-center mt-4 px-3">
+            <iframe
+              style={{ border: 0, width: "100%", height: "200px" }}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.023547922144!2d110.6391087!3d-6.6218739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e711e6aa6f4aac5%3A0x27acfb8fefa2dc43!2sMarine%20Science%20Techno%20Park%20UNDIP!5e0!3m2!1sen!2sid!4v1633406511176!5m2!1sen!2sid"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <div className="flex justify-center gap-5">
+          <SocialMediaCard
+            link="https://www.instagram.com/dsa_arrumsamudra?igsh=eGVlcDA0NXdmd2kx"
+            svg={Instagram}
+          />
+          <SocialMediaCard link="https://wa.me/6281575249021" svg={Whatsapp} />
+          <SocialMediaCard
+            link="https://www.tiktok.com/@arrumsamudranusantara?_t=8qCLXG5lkeK&_r=1"
+            svg={TikTok}
+          />
+          <SocialMediaCard
+            link="https://mail.google.com/mail/?view=cm&fs=1&to=ptarrumsamudranusantara@gmail.com"
+            svg={Email}
+          />
         </div>
       </div>
     </div>
