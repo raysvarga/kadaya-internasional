@@ -1,5 +1,6 @@
 import MobileContainer from "./components/layouts/MobileContainer";
 import News from "./pages/News";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import ProductDetail from "./pages/ProductDetail";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -18,6 +19,10 @@ export default function App() {
     {
       path: "/about",
       element: <About />,
+    },
+    {
+      path: "/news",
+      element: <News />,
     },
     {
       path: "/find",
