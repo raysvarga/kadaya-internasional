@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/img/logo.png";
+import { Link } from "react-router-dom";
 
 const GetingCloserToArrum = () => {
   return (
@@ -9,12 +10,12 @@ const GetingCloserToArrum = () => {
           Mengenal lebih <br /> dekat Arrum
         </h3>
         <p className="text-xs mt-1">
-          Klik disini untuk mengenal lebih dekat tentang Arrum Samudra Nusantara
+          <Link to={"/about"} className="text-[#0795ff] font-medium underline">Klik disini</Link> untuk mengenal lebih dekat tentang Arrum Samudra Nusantara
         </p>
       </div>
-      <div className="grow-0 shrink-0">
+      <Link to={"/about"} className="grow-0 shrink-0">
         <img src={logo} alt="Arrum Samudra" className="w-[75px]" />
-      </div>
+      </Link>
     </div>
   );
 };

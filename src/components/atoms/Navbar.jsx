@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="bg-[#fafafa] h-14 rounded-full flex justify-evenly items-center drop-shadow-md fixed w-80 left-1/2 bottom-4 z-50 transform -translate-x-1/2">
-      <div>
+      <Link to={"/"}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={64}
@@ -19,8 +20,8 @@ const Navbar = () => {
             clipRule="evenodd"
           />
         </svg>
-      </div>
-      <div className="bg-[#0795ff] w-fit h-fit p-2 rounded-full grid place-items-center">
+      </Link>
+      <Link to={"/"} className="bg-[#0795ff] w-fit h-fit p-2 rounded-full grid place-items-center">
         <svg
           width="64px"
           height="64px"
@@ -45,8 +46,8 @@ const Navbar = () => {
              
           </g>
         </svg>
-      </div>
-      <div>
+      </Link>
+      <Link to={"/news"}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlSpace="preserve"
@@ -60,7 +61,7 @@ const Navbar = () => {
           <path d="M12 4c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zM20 22h-5c-.6 0-1-.4-1-1s.4-1 1-1h5c1.1 0 2-.9 2-2V6h-2c-.6 0-1-.4-1-1s.4-1 1-1h3c.6 0 1 .4 1 1v13c0 2.2-1.8 4-4 4zM10 14H5c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h5c.6 0 1 .4 1 1v6c0 .6-.4 1-1 1zm-4-2h3V8H6v4zM16 8h-3c-.6 0-1-.4-1-1s.4-1 1-1h3c.6 0 1 .4 1 1s-.4 1-1 1zM16 11h-3c-.6 0-1-.4-1-1s.4-1 1-1h3c.6 0 1 .4 1 1s-.4 1-1 1z" />
           <path d="M16 14h-3c-.6 0-1-.4-1-1s.4-1 1-1h3c.6 0 1 .4 1 1s-.4 1-1 1zM16 18H5c-.6 0-1-.4-1-1s.4-1 1-1h11c.6 0 1 .4 1 1s-.4 1-1 1z" />
         </svg>
-      </div>
+      </Link>
     </div>
   );
 };
