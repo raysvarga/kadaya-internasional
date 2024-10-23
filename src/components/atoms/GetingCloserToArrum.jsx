@@ -3,7 +3,7 @@ import logo from "../../assets/img/logo.png";
 
 const GetingCloserToArrum = () => {
   return (
-    <div className="mt-6 flex items-center px-3">
+    <div className="mt-5 flex items-center px-3">
       <div>
         <h3 className="text-2xl font-medium leading-7">
           Mengenal lebih <br /> dekat Arrum

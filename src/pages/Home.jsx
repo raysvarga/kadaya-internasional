@@ -15,9 +15,9 @@ const Home = () => {
       <div className="mx-5">
         <BannerGradient />
         <GetingCloserToArrum />
-        <CategorySelection />
+        <CategorySelection category />
         <ProductTypeSelection />
-        <ProductContainer />
+        <ProductContainer showCategory />
       </div>
     </>
   );
