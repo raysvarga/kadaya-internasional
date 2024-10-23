@@ -10,7 +10,7 @@ const ProductDescription = () => {
           <p className="text-sm">Olahan Ikan</p>
         </div>
       </div>
-      <div className="relative z-10 -top-7 bg-white rounded-t-3xl p-6 h-full">
+      <div className="relative z-10 -top-7 bg-gradient-to-b from-white from-90% to-[#fafafa] rounded-t-3xl p-6 h-full">
         <div>
           <h2 className="text-xl font-extrabold">Rp 15.000</h2>
         </div>

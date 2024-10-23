@@ -1,9 +1,13 @@
 import React from "react";
 
-const ProductCard = () => {
+const ProductCard = ({ showCategory }) => {
   return (
     <div className="bg-white w-[150px] rounded-2xl drop-shadow-md p-3 pt-4 mb-1 relative">
-      <p className="bg-[#f7cd3c] w-fit rounded-full text-[10px] py-1 px-2 text-white absolute top-0 right-7 transform -translate-y-1/2 translate-x-1/2">
+      <p
+        className={`bg-[#f7cd3c] w-fit rounded-full text-[10px] py-1 px-2 text-white absolute top-0 right-7 transform -translate-y-1/2 translate-x-1/2 ${
+          showCategory ? null : "hidden"
+        }`}
+      >
         Olahan Ikan
       </p>
       <div className="flex justify-center">
