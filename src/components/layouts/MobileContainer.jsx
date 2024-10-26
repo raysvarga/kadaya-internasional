@@ -1,7 +1,7 @@
 import React from "react";
 
 const MobileContainer = ({ children }) => {
-  return <div className="max-w-[480px] mx-auto p-5">{children}</div>;
+  return <div className="max-w-[480px] mx-auto">{children}</div>;
 };
 
 export default MobileContainer;

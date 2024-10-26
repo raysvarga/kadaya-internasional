@@ -1,16 +1,16 @@
 import React from "react";
 import ProductCard from "../atoms/ProductCard";
 
-const ProductContainer = () => {
+const ProductContainer = ({ showCategory }) => {
   return (
     <div>
-      <div className="flex flex-wrap justify-between gap-4 pb-16 max-w-80 mx-auto">
+      <div className="flex flex-wrap justify-between gap-4 pb-20 max-w-80 mx-auto">
         {/* <div className="grid grid-cols-2 gap-5"> */}
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductCard showCategory={showCategory} />
+        <ProductCard showCategory={showCategory} />
+        <ProductCard showCategory={showCategory} />
+        <ProductCard showCategory={showCategory} />
+        <ProductCard showCategory={showCategory} />
         {/* </div> */}
       </div>
     </div>

@@ -1,13 +1,19 @@
 import React from "react";
 
-const CategorySelection = () => {
+const CategorySelection = ({ category, selected }) => {
   return (
     <div>
-      <div className="px-3 mt-5">
-        <h2 className="font-semibold text-lg">Category</h2>
-        <div className="mt-4 flex justify-between">
+      <div className="px-2 mt-4">
+        <h2 className={`font-semibold text-lg ${category ? null : "hidden"}`}>
+          Category
+        </h2>
+        <div className="mt-3 flex justify-between">
           <div className="flex flex-col items-center w-fit">
-            <button className="w-12 h-12 bg-[#0795ff] rounded-full grid place-content-center">
+            <button
+              className={`w-12 h-12 bg-[#0795ff] rounded-full grid place-content-center ${
+                selected ? "bg-red-600" : null
+              }`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlSpace="preserve"
@@ -133,7 +139,7 @@ const CategorySelection = () => {
           </div>
         </div>
       </div>
-      <hr className="mt-5" />
+      <hr className="mt-4" />
     </div>
   );
 };

@@ -12,11 +12,13 @@ const Home = () => {
     <>
       <Navbar />
       <Header />
-      <BannerGradient />
-      <GetingCloserToArrum />
-      <CategorySelection />
-      <ProductTypeSelection />
-      <ProductContainer />
+      <div className="mx-5">
+        <BannerGradient />
+        <GetingCloserToArrum />
+        <CategorySelection category />
+        <ProductTypeSelection />
+        <ProductContainer showCategory />
+      </div>
     </>
   );
 };
