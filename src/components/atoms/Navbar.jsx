@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="bg-[#fafafa] h-14 rounded-full flex justify-evenly items-center drop-shadow-md fixed w-80 left-1/2 bottom-4 z-50 transform -translate-x-1/2">
-      <Link to={"/"}>
+      <Link to={"/stats"}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={64}
@@ -21,7 +21,10 @@ const Navbar = () => {
           />
         </svg>
       </Link>
-      <Link to={"/"} className="bg-[#0795ff] w-fit h-fit p-2 rounded-full grid place-items-center">
+      <Link
+        to={"/"}
+        className="bg-[#0795ff] w-fit h-fit p-2 rounded-full grid place-items-center"
+      >
         <svg
           width="64px"
           height="64px"

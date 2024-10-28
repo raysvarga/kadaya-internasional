@@ -5,6 +5,7 @@ import About from "./pages/About";
 import ProductDetail from "./pages/ProductDetail";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import FindProduct from "./pages/FindProduct";
+import Statistics from "./pages/Statistics";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -27,6 +28,10 @@ export default function App() {
     {
       path: "/find",
       element: <FindProduct />,
+    },
+    {
+      path: "/stats",
+      element: <Statistics />,
     },
   ]);
 
