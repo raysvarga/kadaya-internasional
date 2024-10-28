@@ -34,6 +34,7 @@ export default function App() {
     <>
       <MobileContainer>
         <RouterProvider router={router} />
+        {/* <StatisticCard/> */}
       </MobileContainer>
     </>
   );

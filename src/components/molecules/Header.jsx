@@ -1,13 +1,14 @@
 import React from "react";
 import SearchBar from "../atoms/SearchBar";
 import logoTxt from "../../assets/img/logoTxt.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="flex justify-between items-center mx-5 mt-5">
-      <div className="grow-0">
+      <Link to={"/"} className="grow-0">
         <img src={logoTxt} alt="Arrum Samudra" />
-      </div>
+      </Link>
       <SearchBar />
     </div>
   );
