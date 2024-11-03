@@ -5,6 +5,7 @@ import About from "./pages/About";
 import ProductDetail from "./pages/ProductDetail";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import FindProduct from "./pages/FindProduct";
+import NewsDetail from "./pages/NewsDetail";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -25,6 +26,10 @@ export default function App() {
       element: <News />,
     },
     {
+      path: "/news-detail",
+      element: <NewsDetail />,
+    },
+    {
       path: "/find",
       element: <FindProduct />,
     },
@@ -34,7 +39,6 @@ export default function App() {
     <>
       <MobileContainer>
         <RouterProvider router={router} />
-        {/* <StatisticCard/> */}
       </MobileContainer>
     </>
   );
