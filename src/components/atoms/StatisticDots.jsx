@@ -3,7 +3,7 @@ import React from "react";
 const StatisticDots = () => {
   return (
     <div>
-      <div className="bg-[#231f20] rounded-full mt-2 py-1 ps-1">
+      <div className="bg-[#231f20] rounded-full mt-1 py-1 ps-1">
         <div className="flex gap-2">
           <div className="flex gap-1 items-center">
             <div className="w-5 h-5 bg-[#2c3c46] rounded-full ring-1 ring-white"></div>

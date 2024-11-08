@@ -2,7 +2,7 @@ import React from "react";
 
 const StatisticPerson = () => {
   return (
-    <div className="flex justify-center px-7">
+    <div className="flex justify-center px-5">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlSpace="preserve"
