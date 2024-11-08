@@ -275,11 +275,13 @@ const AboutContainer = () => {
             imageSrc={Astra}
             altText="Astra Logo"
             bgColor="bg-white"
+            link="https://www.astra.co.id/"
           />
           <PartnerCard
             imageSrc={KBA}
             altText="Kampung BerseriAstra Logo"
             bgColor="bg-white"
+            link="https://www.satu-indonesia.com/kampungberseriastra/"
           />
         </div>
       </div>

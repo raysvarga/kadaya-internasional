@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import News from "./pages/News";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import NewsDetail from "./pages/NewsDetail.jsx";
 import ProductDetail from "./pages/ProductDetail";
 import FindProduct from "./pages/FindProduct";
 import Statistics from "./pages/Statistics";
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/stats",
     element: <Statistics />,
+  },
+  {
+    path: "/news-detail",
+    element: <NewsDetail />,
   },
 ]);
 
