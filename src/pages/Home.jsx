@@ -10,9 +10,11 @@ import { useMainContext } from "../context/MainContext";
 import productJson from "../data/products.json";
 
 const Home = () => {
-  const { setDataToState, setFilteredProducts, products } = useMainContext();
+  const { setDataToState, setFilteredProducts, products, setActiveCategory } =
+    useMainContext();
 
   useEffect(() => {
+    setActiveCategory("");
     localStorage.setItem("productData", JSON.stringify(productJson));
   }, []);
 
