@@ -1,19 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const ProductCard = ({ showCategory }) => {
+const ProductCard = (props) => {
   return (
-    <div className="bg-white w-[150px] rounded-2xl drop-shadow-md p-3 pt-4 mb-1 relative">
+    <Link
+      to={`/product-detail/${props.id}`}
+      className="bg-white w-[150px] rounded-2xl drop-shadow-md p-3 pt-4 mb-1 relative"
+    >
       <p
-        className={`bg-[#f7cd3c] w-fit rounded-full text-[10px] py-1 px-2 text-white absolute top-0 right-7 transform -translate-y-1/2 translate-x-1/2 ${
-          showCategory ? null : "hidden"
+        className={`bg-[#f7cd3c] w-fit rounded-full text-[10px] py-1 ${
+          props.category === "Kopi" ? "px-3 right-3" : "px-2 right-7"
+        } text-white absolute top-0 transform -translate-y-1/2 translate-x-1/2 ${
+          props.showCategory ? null : "hidden"
         }`}
       >
-        Olahan Ikan
+        {props.category}
       </p>
       <div className="flex justify-center">
         <img src="https://placehold.co/80x100" alt="" />
       </div>
-      <h4 className="text-sm font-medium mt-2">Abon Tongkol</h4>
+      <h4 className="text-sm font-medium mt-2">{props.name}</h4>
       <div className="flex gap-1 items-center mt-1">
         <svg
           width="64px"
@@ -23,59 +29,58 @@ const ProductCard = ({ showCategory }) => {
           xmlns="http://www.w3.org/2000/svg"
           className="w-3 h-3"
         >
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
           <g
             id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></g>
           <g id="SVGRepo_iconCarrier">
             <path
               d="M16.719 19.7519L16.0785 14.6279C15.8908 13.1266 14.6146 12 13.1017 12H12H10.8983C9.38538 12 8.10917 13.1266 7.92151 14.6279L7.28101 19.7519C7.1318 20.9456 8.06257 22 9.26556 22H12H14.7344C15.9374 22 16.8682 20.9456 16.719 19.7519Z"
               stroke="#f7cd3c"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
             <circle
               cx="12"
               cy="5"
               r="3"
               stroke="#f7cd3c"
-              stroke-width="2"
+              strokeWidth="2"
             ></circle>
             <circle
               cx="4"
               cy="9"
               r="2"
               stroke="#f7cd3c"
-              stroke-width="2"
+              strokeWidth="2"
             ></circle>
             <circle
               cx="20"
               cy="9"
               r="2"
               stroke="#f7cd3c"
-              stroke-width="2"
+              strokeWidth="2"
             ></circle>
             <path
               d="M4 14H3.69425C2.71658 14 1.8822 14.7068 1.72147 15.6712L1.38813 17.6712C1.18496 18.8903 2.12504 20 3.36092 20H7"
               stroke="#f7cd3c"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
             <path
               d="M20 14H20.3057C21.2834 14 22.1178 14.7068 22.2785 15.6712L22.6119 17.6712C22.815 18.8903 21.8751 20 20.6392 20C19.4775 20 18.0952 20 17 20"
               stroke="#f7cd3c"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
-             
           </g>
         </svg>
-        <p className="text-[10px] opacity-70">PT Upin Ipin</p>
+        <p className="text-[10px] opacity-70">{props.team}</p>
       </div>
       <div className="flex gap-1 items-center">
         <svg
@@ -92,7 +97,7 @@ const ProductCard = ({ showCategory }) => {
           <path d="M358.528 240c.896-2.512 1.472-5.184 1.472-8V80h16V0H120v80h16v152c0 2.816.576 5.488 1.472 8H0v80h16v152c0 13.232 10.768 24 24 24h176c13.232 0 24-10.768 24-24V320h16v152c0 13.232 10.768 24 24 24h176c13.232 0 24-10.768 24-24V320h16v-80H358.528zM136 64V16h224v48H136zm88 408c0 4.416-3.592 8-8 8H40c-4.408 0-8-3.584-8-8V320h192v152zm16-168H16v-48h224v48zm0-64h-80c-4.408 0-8-3.584-8-8V80h192v152c0 4.416-3.592 8-8 8h-96zm224 232c0 4.416-3.592 8-8 8H280c-4.408 0-8-3.584-8-8V320h192v152zm16-168H256v-48h224v48z" />
           <path d="M336 384h64c8.824 0 16-7.176 16-16v-32h-96v32c0 8.824 7.176 16 16 16zm0-32h64l.008 16H336v-16zM448 272h16v16h-16zM384 272h48v16h-48zM296 128V96h-96v32c0 8.824 7.176 16 16 16h64c8.824 0 16-7.176 16-16zm-80-16h64l.008 16H216v-16zM328 32h16v16h-16zM264 32h48v16h-48z" />
         </svg>
-        <p className="text-[10px] opacity-70">PT Kembar</p>
+        <p className="text-[10px] opacity-70">{props.unit}</p>
       </div>
       <div className="flex items-center gap-1 mt-1">
         <svg
@@ -133,7 +138,17 @@ const ProductCard = ({ showCategory }) => {
           />
           <path fill="none" stroke="none" d="M0 0h36v36H0z" />
         </svg>
-        <p className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1">
+
+        {props.cert?.map((data, index) => (
+          <p
+            key={index}
+            className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1"
+          >
+            {data}
+          </p>
+        ))}
+
+        {/* <p className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1">
           BPOM
         </p>
         <p className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1">
@@ -141,9 +156,9 @@ const ProductCard = ({ showCategory }) => {
         </p>
         <p className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1">
           Halal
-        </p>
+        </p> */}
       </div>
-    </div>
+    </Link>
   );
 };
 

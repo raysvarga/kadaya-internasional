@@ -1,6 +1,5 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-// import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import News from "./pages/News";
@@ -11,6 +10,7 @@ import ProductDetail from "./pages/ProductDetail";
 import FindProduct from "./pages/FindProduct";
 import Statistics from "./pages/Statistics";
 import MobileContainer from "./components/layouts/MobileContainer.jsx";
+import { MainContextProvider } from "./context/MainContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/product-detail",
+    path: "/product-detail/:id",
     element: <ProductDetail />,
   },
   {
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     element: <News />,
   },
   {
-    path: "/find",
+    path: "/find/:cat",
     element: <FindProduct />,
   },
   {
@@ -44,10 +44,11 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    {/* <App /> */}
-    <MobileContainer>
+  // <StrictMode>
+  <MobileContainer>
+    <MainContextProvider>
       <RouterProvider router={router} />
-    </MobileContainer>
-  </StrictMode>
+    </MainContextProvider>
+  </MobileContainer>
+  // </StrictMode>
 );
