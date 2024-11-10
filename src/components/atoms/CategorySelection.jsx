@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useMainContext } from "../../context/MainContext";
+import { useNavigate } from "react-router-dom";
 
 const CategorySelection = ({ category, selected }) => {
+  const { activeCategory } = useMainContext();
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className="px-2 mt-4">
@@ -11,8 +16,11 @@ const CategorySelection = ({ category, selected }) => {
           <div className="flex flex-col items-center w-fit">
             <button
               className={`w-12 h-12 bg-[#0795ff] rounded-full grid place-content-center ${
-                selected ? "bg-red-600" : null
+                activeCategory === "Ikan Segar" ? "bg-red-600" : null
               }`}
+              onClick={() => {
+                navigate("/find/ikan-segar");
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +40,14 @@ const CategorySelection = ({ category, selected }) => {
             </p>
           </div>
           <div className="flex flex-col items-center w-fit">
-            <button className="w-12 h-12 bg-[#0795ff] rounded-full grid place-content-center">
+            <button
+              onClick={() => {
+                navigate("/find/olahan-ikan");
+              }}
+              className={`w-12 h-12 ${
+                activeCategory === "Olahan Ikan" ? "bg-red-600" : null
+              } bg-[#0795ff] rounded-full grid place-content-center`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlSpace="preserve"
@@ -52,7 +67,14 @@ const CategorySelection = ({ category, selected }) => {
             </p>
           </div>
           <div className="flex flex-col items-center w-fit">
-            <button className="w-12 h-12 bg-[#0795ff] rounded-full grid place-content-center">
+            <button
+              onClick={() => {
+                navigate("/find/rumput-laut");
+              }}
+              className={`w-12 h-12 ${
+                activeCategory === "Rumput Laut" ? "bg-red-600" : null
+              } bg-[#0795ff] rounded-full grid place-content-center`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlSpace="preserve"
@@ -75,7 +97,14 @@ const CategorySelection = ({ category, selected }) => {
             </p>
           </div>
           <div className="flex flex-col items-center w-fit">
-            <button className="w-12 h-12 bg-[#0795ff] rounded-full grid place-content-center">
+            <button
+              onClick={() => {
+                navigate("/find/kopi");
+              }}
+              className={`w-12 h-12 ${
+                activeCategory === "Kopi" ? "bg-red-600" : null
+              } bg-[#0795ff] rounded-full grid place-content-center`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlSpace="preserve"
@@ -103,11 +132,11 @@ const CategorySelection = ({ category, selected }) => {
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-11 h-11"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g
                   id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></g>
                 <g id="SVGRepo_iconCarrier">
                   <circle
