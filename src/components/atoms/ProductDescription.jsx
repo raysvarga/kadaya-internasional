@@ -12,7 +12,9 @@ const ProductDescription = ({ data }) => {
       </div>
       <div className="relative z-10 -top-7 bg-gradient-to-b from-white from-90% to-[#fafafa] rounded-t-3xl p-6 h-full">
         <div>
-          <h2 className="text-xl font-extrabold">Rp 15.000</h2>
+          <h2 className="text-xl font-extrabold">{`Rp ${data?.price.toLocaleString(
+            "id-ID"
+          )}`}</h2>
         </div>
         <div>
           <div className="flex gap-1 items-center mt-1">
@@ -147,7 +149,9 @@ const ProductDescription = ({ data }) => {
         </div>
         <div className="mt-3">
           <h4 className="text-sm font-semibold">Deskripsi</h4>
-          <p className="text-xs mt-1 text-justify">{data?.desc}</p>
+          <p className="text-xs mt-1 text-justify leading-relaxed">
+            {data?.desc}
+          </p>
         </div>
       </div>
     </div>

@@ -5,10 +5,11 @@
     "team": "Mulya Bakti",
     "unit": "Dampingan & Binaan",
     "cert": ["Halal", "SNI"],
-    "img": "",
+    "img": "abon-tongkol.jpg",
     "desc": "Abon Ikan Tongkol ini merupakan produk olahan ikan yang dihasilkan oleh tim Mulya Bakti. Dibuat dari ikan tongkol segar, abon ini memiliki cita rasa gurih dan lezat. Produk ini telah bersertifikat Halal dan SNI, menjamin kualitas dan keamanannya untuk dikonsumsi.",
     "category": "Olahan Ikan",
-    "type": "Rekomendasi"
+    "type": "Rekomendasi",
+    "price": 45000
   },
   {
     "id": 2,
@@ -16,10 +17,11 @@
     "team": "Sidodadi",
     "unit": "PT. Dheluqi Pangan Indonesia",
     "cert": ["Halal"],
-    "img": "",
+    "img": "krupuk-ikan.jpg",
     "desc": "Krupuk Ikan ini adalah camilan renyah yang terbuat dari bahan dasar ikan berkualitas. Diproduksi oleh PT. Dheluqi Pangan Indonesia dengan tim Sidodadi, krupuk ini memiliki rasa yang khas dan gurih. Telah bersertifikat Halal, menjadikan produk ini aman dan cocok untuk dikonsumsi oleh siapa saja.",
     "category": "Olahan Ikan",
-    "type": ""
+    "type": "",
+    "price": 20000
   },
   {
     "id": 3,
@@ -27,10 +29,11 @@
     "team": "Sidodadi",
     "unit": "PT. Dheluqi Pangan Indonesia",
     "cert": ["Halal"],
-    "img": "",
+    "img": "abon-tuna.jpg",
     "desc": "Abon Tuna ini adalah produk inovasi yang dihasilkan oleh PT. Dheluqi Pangan Indonesia bersama tim Sidodadi. Dibuat dari ikan tuna segar, abon ini memiliki rasa yang enak dan tekstur yang pas. Sertifikat Halal yang dimilikinya menjamin produk ini aman untuk dikonsumsi oleh seluruh masyarakat.",
     "category": "Olahan Ikan",
-    "type": "Produk Inovasi"
+    "type": "Produk Inovasi",
+    "price": 48000
   },
   {
     "id": 4,
@@ -38,10 +41,11 @@
     "team": "Distribusi Samudera Biru",
     "unit": "PT Samudera Biru",
     "cert": ["SKP"],
-    "img": "",
+    "img": "ikan-kembung.png",
     "desc": "Ikan Kembung Segar ini adalah produk unggulan dari PT Samudera Biru yang didistribusikan oleh tim Distribusi Samudera Biru. Ikan ini dipilih dengan hati-hati untuk memastikan kesegaran dan kualitas terbaik. Sertifikat SKP menjamin bahwa produk ini memenuhi standar kualitas dan keamanan pangan.",
     "category": "Ikan Segar",
-    "type": "Produk Unggulan"
+    "type": "Produk Unggulan",
+    "price": 75000
   },
   {
     "id": 5,
@@ -49,10 +53,11 @@
     "team": "Distribusi Laut Jaya",
     "unit": "PT Laut Jaya",
     "cert": ["BPOM"],
-    "img": "",
+    "img": "ikan-salmon-fillet.png",
     "desc": "Ikan Salmon Fillet ini adalah produk dari PT Laut Jaya yang didistribusikan oleh tim Distribusi Laut Jaya. Fillet salmon ini diproses dengan standar tinggi untuk menjaga kesegaran dan kualitas dagingnya. Sertifikat BPOM menunjukkan bahwa produk ini telah diuji dan aman untuk dikonsumsi.",
     "category": "Ikan Segar",
-    "type": ""
+    "type": "",
+    "price": 120000
   },
   {
     "id": 6,
@@ -60,10 +65,11 @@
     "team": "Distribusi Segar Tani",
     "unit": "PT Segar Tani",
     "cert": ["Halal"],
-    "img": "",
+    "img": "ikan-lele.png",
     "desc": "Ikan Lele Segar ini merupakan rekomendasi produk dari PT Segar Tani yang didistribusikan oleh tim Distribusi Segar Tani. Ikan lele ini dipelihara dan dipanen dengan cara yang memastikan kesegaran dan kualitas terbaik. Produk ini telah bersertifikat Halal, menjamin keHalalan dan keamanan untuk dikonsumsi.",
     "category": "Ikan Segar",
-    "type": "Rekomendasi"
+    "type": "Rekomendasi",
+    "price": 30000
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
     "img": "",
     "desc": "Rumput Laut Kering ini merupakan produk unggulan dari PT Pangan Laut yang diproduksi oleh tim Industri Pangan Laut. Produk ini diolah dari rumput laut berkualitas tinggi dan dikeringkan dengan proses yang higienis. Sertifikat BPOM dan Halal menunjukkan bahwa produk ini aman dan sesuai untuk dikonsumsi oleh berbagai kalangan.",
     "category": "Rumput Laut",
-    "type": "Produk Unggulan"
+    "type": "Produk Unggulan",
+    "price": 50000
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
     "img": "",
     "desc": "Snack Rumput Laut ini adalah camilan sehat dari PT Laut Alami yang diproduksi oleh tim Cemilan Laut Alami. Dibuat dari rumput laut segar yang diolah menjadi snack renyah dan lezat. Produk ini telah bersertifikat BPOM dan SKP, menjamin kualitas dan keamanannya untuk dikonsumsi.",
     "category": "Rumput Laut",
-    "type": ""
+    "type": "",
+    "price": 25000
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@
     "img": "",
     "desc": "Minuman Gel Rumput Laut ini adalah produk inovasi dari PT Laut Nusantara yang dikembangkan oleh tim Sehat Laut Nusantara. Minuman ini mengandung gel rumput laut yang kaya akan nutrisi dan baik untuk kesehatan. Dengan sertifikat BPOM dan Halal, produk ini aman dan cocok dikonsumsi oleh semua orang.",
     "category": "Rumput Laut",
-    "type": "Produk Inovasi"
+    "type": "Produk Inovasi",
+    "price": 18000
   },
   {
     "id": 10,
@@ -107,7 +116,8 @@
     "img": "",
     "desc": "Kopi Umi Zak Ly adalah rekomendasi kopi dari R Zaky Collection yang diproduksi oleh tim Swata Mina Al-Muttaqin. Kopi ini terbuat dari biji kopi pilihan yang diproses dengan metode tradisional untuk menghasilkan cita rasa yang khas dan aroma yang nikmat. Produk ini telah bersertifikat Halal, sehingga aman untuk dikonsumsi.",
     "category": "Kopi",
-    "type": "Rekomendasi"
+    "type": "Rekomendasi",
+    "price": 65000
   },
   {
     "id": 11,
@@ -118,7 +128,8 @@
     "img": "",
     "desc": "Coffee Jowo adalah produk unggulan dari Najwa yang diproduksi oleh tim Najwastore. Kopi ini memiliki rasa yang kuat dan khas, berasal dari biji kopi berkualitas yang diproses dengan teknik yang cermat. Dengan sertifikat Halal, Coffee Jowo dijamin aman dan layak untuk dinikmati oleh semua kalangan.",
     "category": "Kopi",
-    "type": "Produk Unggulan"
+    "type": "Produk Unggulan",
+    "price": 55000
   },
   {
     "id": 12,
@@ -129,6 +140,7 @@
     "img": "",
     "desc": "Kopi Toraja adalah produk inovasi dari PT Toraja Koffie yang dihasilkan oleh tim Toraja Specialty Coffee. Kopi ini berasal dari biji kopi terbaik yang ditanam di dataran tinggi Toraja dan diproses dengan metode khusus untuk menjaga cita rasa autentik dan kualitasnya. Produk ini telah bersertifikat Halal, sehingga aman untuk dikonsumsi.",
     "category": "Kopi",
-    "type": "Produk Inovasi"
+    "type": "Produk Inovasi",
+    "price": 85000
   }
 ]

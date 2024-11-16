@@ -17,7 +17,19 @@ const ProductCard = (props) => {
         {props.category}
       </p>
       <div className="flex justify-center">
-        <img src="https://placehold.co/80x100" alt="" />
+        {props.img ? (
+          <img
+            src={`/assets/productImg/${props.img}`}
+            alt={`${props.name}`}
+            className="h-[100px] w-[80px] text-xs"
+          />
+        ) : (
+          <img
+            src={`/assets/productImg/no-pict.png`}
+            alt={`${props.name}`}
+            className="h-[100px] w-[80px] text-xs"
+          />
+        )}
       </div>
       <h4 className="text-sm font-medium mt-2">{props.name}</h4>
       <div className="flex gap-1 items-center mt-1">
@@ -138,7 +150,6 @@ const ProductCard = (props) => {
           />
           <path fill="none" stroke="none" d="M0 0h36v36H0z" />
         </svg>
-
         {props.cert?.map((data, index) => (
           <p
             key={index}
@@ -147,16 +158,6 @@ const ProductCard = (props) => {
             {data}
           </p>
         ))}
-
-        {/* <p className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1">
-          BPOM
-        </p>
-        <p className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1">
-          SKP
-        </p>
-        <p className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1">
-          Halal
-        </p> */}
       </div>
     </Link>
   );

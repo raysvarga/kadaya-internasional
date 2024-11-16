@@ -7,6 +7,7 @@ export const MainContextProvider = ({ children }) => {
   const [products, setProducts] = useState();
   const [filteredProducts, setFilteredProducts] = useState();
   const [activeCategory, setActiveCategory] = useState("");
+  const [searchQuery, setSearchQuery] = useState();
 
   const setDataToState = (incomingProducts) => {
     setProducts(incomingProducts);
@@ -24,24 +25,6 @@ export const MainContextProvider = ({ children }) => {
     setFilteredProducts(updatedProducts);
   };
 
-  // const updateFilteredProducts = (category, query) => {
-  //   let updatedProducts = products;
-
-  //   if (category !== "All") {
-  //     updatedProducts = updatedProducts.filter(
-  //       (product) => product.category === category
-  //     );
-  //   }
-
-  //   if (query) {
-  //     updatedProducts = updatedProducts.filter((product) =>
-  //       product.name.toLowerCase().includes(query.toLowerCase())
-  //     );
-  //   }
-
-  //   setFilteredProducts(updatedProducts);
-  // };
-
   const handleCategoryClick = (categorySelected) => {
     setActiveCategory(categorySelected);
     updateFilteredProducts(categorySelected);
@@ -57,6 +40,8 @@ export const MainContextProvider = ({ children }) => {
         setFilteredProducts,
         setActiveCategory,
         handleCategoryClick,
+        searchQuery,
+        setSearchQuery,
       }}
     >
       {children}

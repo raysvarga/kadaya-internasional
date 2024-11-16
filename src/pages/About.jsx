@@ -10,7 +10,7 @@ const About = () => {
     <Navbar/>
     <Header/>
     <div className='mt-5'>
-        <img src={AboutPict} alt="" />
+        <img className="w-full" src={AboutPict} alt="" />
     </div>
     <AboutContainer/>
     </>

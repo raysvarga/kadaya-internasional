@@ -3,8 +3,13 @@ import { useMainContext } from "../../context/MainContext";
 import { useNavigate } from "react-router-dom";
 
 const CategorySelection = ({ category, selected }) => {
+  const { setSearchQuery } = useMainContext();
   const { activeCategory } = useMainContext();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setSearchQuery(null);
+  }, []);
 
   return (
     <div>

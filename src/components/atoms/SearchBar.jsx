@@ -1,6 +1,9 @@
 import React from "react";
+import { useMainContext } from "../../context/MainContext";
 
 const SearchBar = () => {
+  const { setSearchQuery } = useMainContext();
+
   return (
     <div className="relative">
       <svg
@@ -68,6 +71,7 @@ const SearchBar = () => {
         type="text"
         placeholder="Cari"
         className="py-3 ps-11 pe-12 w-40 bg-white rounded-full outline-none focus:ring-2 focus:ring-[#0795ff] text-sm"
+        onChange={(e) => setSearchQuery(e.target.value)}
       />
     </div>
   );

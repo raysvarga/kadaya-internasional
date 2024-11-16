@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import CategorySelection from "../components/atoms/CategorySelection";
 import ProductContainer from "../components/molecules/ProductContainer";
 import Navbar from "../components/atoms/Navbar";
+import Header from "../components/molecules/Header";
 import { useMainContext } from "../context/MainContext";
 import { useParams } from "react-router-dom";
 
 const FindProduct = () => {
-  const { setActiveCategory } = useMainContext();
+  const { setActiveCategory, searchQuery } = useMainContext();
   const [filteredProducts, setFilteredProducts] = useState();
   const { cat } = useParams();
 
@@ -40,15 +41,30 @@ const FindProduct = () => {
       }
 
       const parsed = JSON.parse(productFromLS);
-      const filtered = parsed.filter(
+      const filteredCategory = parsed.filter(
         (product) => product.category === categoryEdited
       );
-      setFilteredProducts(filtered);
+      const matchesSearch = filteredCategory?.filter((product) => {
+        const matched = product.name
+          .toLowerCase()
+          .includes(searchQuery?.toLowerCase());
+
+        if (searchQuery) {
+          return matched;
+        } else {
+          return product;
+        }
+      });
+
+      setFilteredProducts(matchesSearch);
     }
-  }, [cat]);
+  }, [cat, searchQuery]);
 
   return (
     <div className="mx-5">
+      <div className="-mx-5">
+        <Header />
+      </div>
       <div className="mt-5">
         <CategorySelection selected />
       </div>

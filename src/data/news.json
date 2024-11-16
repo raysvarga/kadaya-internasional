@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "DSA Arrum Berbagi Pinbox",
+    "created_by": "Arrum Samudra",
+    "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi veniam corporis reiciendis.",
+    "category": "Berita Terkini"
+  },
+  {
+    "id": 2,
+    "title": "Pelatihan Pembuatan Produk Olahan Ikan",
+    "created_by": "Arrum Samudra",
+    "desc": "Pelatihan ini bertujuan untuk meningkatkan keterampilan UMKM dalam mengolah produk perikanan menjadi produk bernilai tambah.",
+    "category": "Pelatihan"
+  },
+  {
+    "id": 3,
+    "title": "Event Expo UMKM Jepara",
+    "created_by": "Arrum Samudra",
+    "desc": "Expo ini memberikan kesempatan bagi UMKM di Jepara untuk memamerkan produk-produk unggulan mereka dan menarik minat investor.",
+    "category": "Event"
+  },
+  {
+    "id": 4,
+    "title": "Pendampingan UMKM Perikanan",
+    "created_by": "Arrum Samudra",
+    "desc": "Program pendampingan ini difokuskan pada pengembangan kapasitas UMKM perikanan untuk meningkatkan produksi dan pemasaran.",
+    "category": "Pendampingan"
+  },
+  {
+    "id": 5,
+    "title": "Inovasi Produk Perikanan di Jepara",
+    "created_by": "Arrum Samudra",
+    "desc": "Artikel ini membahas berbagai inovasi terbaru dalam produk perikanan yang dapat diterapkan oleh UMKM di Jepara.",
+    "category": "Berita Terkini"
+  },
+  {
+    "id": 6,
+    "title": "Seminar Meningkatkan Kualitas Produk Perikanan",
+    "created_by": "Arrum Samudra",
+    "desc": "Seminar ini mengundang pakar untuk berbagi pengetahuan dan teknik dalam meningkatkan kualitas produk perikanan.",
+    "category": "Pelatihan"
+  }
+]
