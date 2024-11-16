@@ -17,7 +17,19 @@ const ProductCard = (props) => {
         {props.category}
       </p>
       <div className="flex justify-center">
-        <img src="https://placehold.co/80x100" alt="" />
+        {props.img ? (
+          <img
+            src={`/assets/productImg/${props.img}`}
+            alt={`${props.name}`}
+            className="h-[100px] w-[80px] text-xs"
+          />
+        ) : (
+          <img
+            src={`/assets/productImg/no-pict.png`}
+            alt={`${props.name}`}
+            className="h-[100px] w-[80px] text-xs"
+          />
+        )}
       </div>
       <h4 className="text-sm font-medium mt-2">{props.name}</h4>
       <div className="flex gap-1 items-center mt-1">

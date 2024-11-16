@@ -7,6 +7,7 @@ export const MainContextProvider = ({ children }) => {
   const [products, setProducts] = useState();
   const [filteredProducts, setFilteredProducts] = useState();
   const [activeCategory, setActiveCategory] = useState("");
+  const [searchQuery, setSearchQuery] = useState();
 
   const setDataToState = (incomingProducts) => {
     setProducts(incomingProducts);
@@ -39,6 +40,8 @@ export const MainContextProvider = ({ children }) => {
         setFilteredProducts,
         setActiveCategory,
         handleCategoryClick,
+        searchQuery,
+        setSearchQuery,
       }}
     >
       {children}

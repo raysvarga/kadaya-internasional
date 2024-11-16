@@ -9,6 +9,7 @@ const ProductContainer = ({ showCategory, productData }) => {
           <ProductCard
             key={index}
             id={data.id}
+            img={data.img}
             showCategory={showCategory}
             name={
               data.name.length > 14

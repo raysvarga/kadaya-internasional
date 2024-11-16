@@ -22,7 +22,19 @@ const ProductDetail = () => {
     <div>
       <Header />
       <div className="w-full mt-5 grid place-content-center">
-        <img src="https://placehold.co/150x200" alt="" />
+        {product?.img ? (
+          <img
+            src={`/assets/productImg/${product?.img}`}
+            alt=""
+            className="h-[200px] w-[150px]"
+          />
+        ) : (
+          <img
+            src={`/assets/productImg/no-pict.png`}
+            alt=""
+            className="h-[200px] w-[150px]"
+          />
+        )}
       </div>
       <ProductDescription data={product} />
     </div>

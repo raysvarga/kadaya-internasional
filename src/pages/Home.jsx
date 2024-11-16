@@ -10,11 +10,18 @@ import { useMainContext } from "../context/MainContext";
 import productJson from "../data/products.json";
 
 const Home = () => {
-  const { setDataToState, setFilteredProducts, products, setActiveCategory } =
-    useMainContext();
+  const {
+    setDataToState,
+    setFilteredProducts,
+    products,
+    setActiveCategory,
+    searchQuery,
+    setSearchQuery,
+  } = useMainContext();
 
   useEffect(() => {
     setActiveCategory("");
+    setSearchQuery(null);
     localStorage.setItem("productData", JSON.stringify(productJson));
   }, []);
 
@@ -26,17 +33,31 @@ const Home = () => {
     }
   }, []);
 
+  const filteredProducts = products?.filter((product) => {
+    const matchesSearch = product.name
+      .toLowerCase()
+      .includes(searchQuery?.toLowerCase());
+    return matchesSearch;
+  });
+
   return (
     <>
       <Navbar />
       <Header />
-      <div className="mx-5">
-        <BannerGradient />
-        <GetingCloserToArrum />
-        <CategorySelection category />
-        <ProductTypeSelection />
-        <ProductContainer showCategory productData={products?.slice(0, 6)} />
+      <div className={`${searchQuery ? "hidden" : null}`}>
+        <div className="mx-5">
+          <BannerGradient />
+          <GetingCloserToArrum />
+          <CategorySelection category />
+          <ProductTypeSelection />
+          <ProductContainer showCategory productData={products?.slice(0, 6)} />
+        </div>
       </div>
+      {searchQuery && (
+        <div className="mt-8">
+          <ProductContainer showCategory productData={filteredProducts} />
+        </div>
+      )}
     </>
   );
 };
