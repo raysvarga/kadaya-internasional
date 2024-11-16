@@ -138,7 +138,6 @@ const ProductCard = (props) => {
           />
           <path fill="none" stroke="none" d="M0 0h36v36H0z" />
         </svg>
-
         {props.cert?.map((data, index) => (
           <p
             key={index}
@@ -147,16 +146,6 @@ const ProductCard = (props) => {
             {data}
           </p>
         ))}
-
-        {/* <p className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1">
-          BPOM
-        </p>
-        <p className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1">
-          SKP
-        </p>
-        <p className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1">
-          Halal
-        </p> */}
       </div>
     </Link>
   );
