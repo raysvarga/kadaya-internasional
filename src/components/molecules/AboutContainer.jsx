@@ -200,11 +200,13 @@ const AboutContainer = () => {
               PT Arrum Samudra Nusantara Berdiri Sejak 2023, Saat ini telah
               memiliki 3 Kluster Binaan:
             </p>
-            <ul className="list-disc list-inside">
-              <li>Kluster Nelayan - 59 Anggota</li>
-              <li>Kluster Rumput Laut - 74 Anggota</li>
-              <li>Kluster Pengolahan - 102 Anggota</li>
-            </ul>
+            <div>
+              <ul className="list-disc list-inside">
+                <li>Kluster Nelayan - 59 Anggota</li>
+                <li>Kluster Rumput Laut - 74 Anggota</li>
+                <li>Kluster Pengolahan - 102 Anggota</li>
+              </ul>
+            </div>
             <p>Yang Tersebar di 13 Desa di Kabupaten Jepara.</p>
           </>
         }
