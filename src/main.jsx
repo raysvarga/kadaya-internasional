@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
-    path: "/news",
+    path: "/news/:cat",
     element: <News />,
   },
   {
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
     element: <Statistics />,
   },
   {
-    path: "/news-detail",
+    path: "/news-detail/:id",
     element: <NewsDetail />,
   },
 ]);

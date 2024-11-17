@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from "react-router-dom";
 
 const NewsCategorySelection = () => {
   const responsive = {
@@ -24,21 +25,21 @@ const NewsCategorySelection = () => {
 
   return (
     <Carousel responsive={responsive} arrows={false} containerClass="mx-3 my-3">
-      <div className="bg-red-600 text-center py-1 rounded-lg text-white text-xs mx-1">
-        Berita Terkini
-      </div>
-      <div className="bg-[#0795ff] text-center py-1 rounded-lg text-white text-xs mx-1">
-        Pelatihan
-      </div>
-      <div className="bg-[#0795ff] text-center py-1 rounded-lg text-white text-xs mx-1">
-        Pendampingan
-      </div>
-      <div className="bg-[#0795ff] text-center py-1 rounded-lg text-white text-xs mx-1">
-        Event
-      </div>
-      <div className="bg-[#0795ff] text-center py-1 rounded-lg text-white text-xs mx-1">
-        Inovasi Desa
-      </div>
+      <Link to={"/news/berita-terkini"}>
+        <div className="bg-red-600 text-center py-1 rounded-lg text-white text-xs mx-1">Berita Terkini</div>
+      </Link>
+      <Link to={"/news/pelatihan"}>
+      <div className="bg-[#0795ff] text-center py-1 rounded-lg text-white text-xs mx-1">Pelatihan</div>
+      </Link>
+      <Link to={"/news/pendampingan"} >
+      <div className="bg-[#0795ff] text-center py-1 rounded-lg text-white text-xs mx-1">Pendampingan</div>
+      </Link>
+      <Link to={"/news/event"}>
+      <div className="bg-[#0795ff] text-center py-1 rounded-lg text-white text-xs mx-1">Event</div>
+      </Link>
+      <Link to={"/news/inovasi-desa"}>
+      <div className="bg-[#0795ff] text-center py-1 rounded-lg text-white text-xs mx-1">Inovasi Desa</div>
+      </Link>
     </Carousel>
   );
 };
