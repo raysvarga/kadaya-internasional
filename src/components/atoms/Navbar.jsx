@@ -64,7 +64,7 @@ const Navbar = () => {
         </svg>
       </Link>
       <Link
-        to={"/news"}
+        to={"/news/berita-terkini"}
         className={`${
           location.pathname === "/news" ? "bg-[#0795ff]" : "bg-[#fafafa]"
         } rounded-full p-2`}
