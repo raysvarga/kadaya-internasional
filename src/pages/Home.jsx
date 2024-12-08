@@ -8,6 +8,7 @@ import ProductContainer from "../components/molecules/ProductContainer";
 import Navbar from "../components/atoms/Navbar";
 import { useMainContext } from "../context/MainContext";
 import productJson from "../data/products.json";
+import newsJson from "../data/news.json";
 
 const Home = () => {
   const {
@@ -23,6 +24,11 @@ const Home = () => {
     setActiveCategory("");
     setSearchQuery(null);
     localStorage.setItem("productData", JSON.stringify(productJson));
+  }, []);
+  useEffect(() => {
+    setActiveCategory("");
+    setSearchQuery(null);
+    localStorage.setItem("newsData", JSON.stringify(newsJson));
   }, []);
 
   useEffect(() => {
