@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/molecules/Header";
 import StatisticDots from "../components/atoms/StatisticDots";
 import StatisticPerson from "../components/atoms/StatisticPerson";
@@ -8,28 +8,21 @@ import { Chart } from "react-google-charts";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 const Statistics = () => {
-  const data = [
-    ["Task", "Hours per Day"],
-    ["Work", 10],
-    ["Eat", 10],
-    ["Commute", 10],
-    ["Watch TV", 10],
-    ["Sleep", 10], // CSS-style declaration
-  ];
+  const [statistics, setStatistics] = useState({
+    data: [],
+    data2023: [],
+    data2024: [],
+    progressBars: [],
+  });
 
-  const data2023 = [
-    ["Element", "Value", { role: "style" }],
-    ["Januari", 8.94, "#f2981b"], // RGB value
-    ["Agustus", 10.49, "#f2981b"], // English color name
-    ["Desember", 19.3, "#f2981b"],
-  ];
-
-  const data2024 = [
-    ["Element", "Value", { role: "style" }],
-    ["Januari", 8.94, "#2e8799"], // RGB value
-    ["Agustus", 10.49, "#2e8799"], // English color name
-    ["Desember", 19.3, "#2e8799"],
-  ];
+  useEffect(() => {
+    fetch("/data/statistics.json")
+      .then((response) => response.json())
+      .then((data) => setStatistics(data))
+      .catch((error) =>
+        console.error("Error fetching statistics data:", error)
+      );
+  }, []);
 
   const options = {
     pieHole: 0.4,
@@ -41,32 +34,11 @@ const Statistics = () => {
   };
 
   const optionChart = {
-    // titleTextStyle: {
-    //   fontSize: 13, // Memperbesar ukuran font title
-    //   bold: true,
-    //   color: "#333",
-    // },
     legend: "none",
-    // title: "Data 2023 | Produk terserap oleh Pasar",
     chartArea: {
-      left: 40, // Mengatur margin kiri
-      right: 20, // Mengatur margin kanan
-      // top: 20, // Bisa disesuaikan atau dikurangi
-      // bottom: 50, // Bisa disesuaikan atau dikurangi
-      // width: "100%", // Mengatur area chart agar penuh secara horizontal
-      // height: "85%", // Mengatur area chart agar penuh secara vertikal
+      left: 40,
+      right: 20,
     },
-    // hAxis: {
-    //   // title: "Population",
-    //   minValue: 0,
-    //   slantedText: true, // Membuat teks miring
-    //   slantedTextAngle: 90, // Mengatur sudut kemiringan ke vertikal (90 derajat)
-    // },
-    // vAxis: {
-    //   title: "City",
-    //   slantedText: true, // Membuat teks miring
-    //   slantedTextAngle: 90, // Mengatur sudut kemiringan ke vertikal (90 derajat)
-    // },
   };
 
   return (
@@ -79,34 +51,31 @@ const Statistics = () => {
             Arrum Samudra <br /> dalam Angka
           </h2>
           <p className="text-xs mt-1 w-72">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero,
-            incidunt.
+            Menyajikan data dan statistik terkini mengenai berbagai program yang
+            telah dilakukan oleh Arrum Samudra. Dari peningkatan kesejahteraan
+            masyarakat hingga distribusi produk perikanan.
           </p>
         </div>
 
         <div className="bg-white mt-3 p-4 rounded-xl shadow-sm">
           <div className="-mt-2">
-            {/* <PieChart
-
-              data={[
-                { title: "One", value: 10, color: "#E38627" },
-                { title: "Two", value: 15, color: "#C13C37" },
-                { title: "Three", value: 20, color: "#6A2135" },
-              ]}
-            /> */}
-            <Chart
-              chartType="PieChart"
-              width="100%"
-              height="200px"
-              data={data}
-              options={options}
-            />
+            {statistics.data.length > 0 && (
+              <Chart
+                chartType="PieChart"
+                width="100%"
+                height="200px"
+                data={statistics.data}
+                options={options}
+              />
+            )}
           </div>
           <StatisticDots />
-          <h4 className="font-medium mt-2">Masyarakat terpapar program</h4>
+          <h4 className="font-medium mt-2">Masyarakat Terpapar Program</h4>
           <p className="text-xs mt-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste minima
-            rem molestias rerum dolores suscipit!
+            Grafik ini menunjukkan persentase masyarakat yang telah terpapar
+            oleh berbagai program yang dilaksanakan oleh Arrum Samudra.
+            Menyediakan wawasan tentang jangkauan dan dampak program terhadap
+            komunitas lokal.
           </p>
         </div>
 
@@ -115,8 +84,9 @@ const Statistics = () => {
           <div className="bg-[#231f20] text-white mt-3 px-3 py-1 pb-2 rounded-xl">
             <h4 className="font-semibold">Kelompok Terbesar</h4>
             <p className="text-xs">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur,
-              molestias!
+              Kelompok terbesar yang menerima manfaat dari program-program ini
+              mencakup berbagai demografi. Ini memberikan gambaran tentang
+              kelompok mana yang paling banyak terlibat dan terpengaruh.
             </p>
           </div>
         </div>
@@ -129,33 +99,32 @@ const Statistics = () => {
                 Kluster <br /> Perikanan
               </h4>
               <p className="text-xs mt-[2px] text-center mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda, eius.
+                Kluster perikanan merupakan salah satu fokus utama kami dalam
+                meningkatkan taraf hidup masyarakat melalui program-program
+                yang berkelanjutan dan inovatif.
               </p>
             </div>
           </div>
           <div className="bg-white shadow-sm p-3 rounded-xl">
             <div className="h-24 flex flex-col gap-3 justify-center">
-              <ProgressBar
-                completed={60}
-                baseBgColor="#ffc1c1"
-                bgColor="#f05556"
-                height="25px"
-              />
-              <ProgressBar
-                completed={60}
-                baseBgColor="#9bdcf4"
-                bgColor="#30addb"
-                height="25px"
-              />
+              {statistics.progressBars.map((bar, index) => (
+                <ProgressBar
+                  key={index}
+                  completed={bar.completed}
+                  baseBgColor={bar.baseBgColor}
+                  bgColor={bar.bgColor}
+                  height="25px"
+                />
+              ))}
             </div>
             <div className="bg-[#231f20] text-white mx-auto rounded-xl p-3 mt-3 w-fit">
               <h4 className="font-semibold text-center leading-tight">
                 Kluster <br /> Perikanan
               </h4>
               <p className="text-xs mt-[2px] text-center mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda, eius.
+                Kluster perikanan adalah area fokus utama dalam usaha kami
+                untuk meningkatkan ekonomi lokal melalui pendekatan inovatif
+                dan berkelanjutan.
               </p>
             </div>
           </div>
@@ -164,20 +133,22 @@ const Statistics = () => {
         <div className="p-6 mt-3 bg-white rounded-xl shadow-sm">
           <p className="font-semibold">Data 2023</p>
           <div>
-            <Chart
-              chartType="ColumnChart"
-              width="100%"
-              height="100%"
-              data={data2023}
-              options={optionChart}
-            />
+            {statistics.data2023.length > 0 && (
+              <Chart
+                chartType="ColumnChart"
+                width="100%"
+                height="100%"
+                data={statistics.data2023}
+                options={optionChart}
+              />
+            )}
           </div>
           <div className="bg-[#231f20] text-white rounded-lg p-3">
-            <p className="font-semibold mb-1">Produk terserap oleh Pasar</p>
+            <p className="font-semibold mb-1">Produk Terserap oleh Pasar</p>
             <p className="text-xs">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-              fugit? Atque, sit! Eaque quos ratione itaque temporibus
-              recusandae? Reiciendis, aspernatur?
+              Data ini menunjukkan jumlah produk yang berhasil diserap oleh
+              pasar selama tahun 2023. Menyediakan wawasan tentang keberhasilan
+              distribusi dan penerimaan pasar terhadap produk-produk kami.
             </p>
           </div>
         </div>
@@ -185,22 +156,24 @@ const Statistics = () => {
         <div className="p-6 mt-3 bg-white rounded-xl shadow-sm">
           <p className="font-semibold">Data 2024</p>
           <div>
-            <Chart
-              chartType="ColumnChart"
-              width="100%"
-              height="100%"
-              data={data2024}
-              options={optionChart}
-            />
+            {statistics.data2024.length > 0 && (
+              <Chart
+                chartType="ColumnChart"
+                width="100%"
+                height="100%"
+                data={statistics.data2024}
+                options={optionChart}
+              />
+            )}
           </div>
           <div className="bg-[#231f20] text-white rounded-lg p-3">
             <p className="font-semibold mb-1">
-              Peningkatan pendapatan masyarakat
+              Peningkatan Pendapatan Masyarakat
             </p>
             <p className="text-xs">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-              fugit? Atque, sit! Eaque quos ratione itaque temporibus
-              recusandae? Reiciendis, aspernatur?
+              Statistik ini menunjukkan peningkatan pendapatan masyarakat
+              sepanjang tahun 2024. Menyoroti keberhasilan program-program kami
+              dalam meningkatkan ekonomi lokal dan kualitas hidup masyarakat.
             </p>
           </div>
         </div>

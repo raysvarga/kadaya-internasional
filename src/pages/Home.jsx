@@ -55,8 +55,13 @@ const Home = () => {
           <BannerGradient />
           <GetingCloserToArrum />
           <CategorySelection category />
-          <ProductTypeSelection />
-          <ProductContainer showCategory productData={products?.slice(0, 6)} />
+          {/* <ProductTypeSelection /> */}
+          <div className="mt-5">
+            <ProductContainer
+              showCategory
+              productData={products?.slice(0, 6)}
+            />
+          </div>
         </div>
       </div>
       {searchQuery && (
