@@ -54,7 +54,6 @@ const News = () => {
   return (
     <>
       <div>
-        {console.log(filteredCategory)}
         <Navbar />
         <Header />
         <NewsCategorySelection />

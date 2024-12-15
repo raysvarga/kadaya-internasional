@@ -14,6 +14,7 @@ const Home = () => {
   const {
     setDataToState,
     setFilteredProducts,
+    filteredProducts,
     products,
     setActiveCategory,
     searchQuery,
@@ -25,23 +26,30 @@ const Home = () => {
     setActiveCategory("");
     setSearchQuery(null);
     setOtherSelected(false);
-    localStorage.setItem("productData", JSON.stringify(productJson));
+    sessionStorage.setItem("productData", JSON.stringify(productJson));
   }, []);
+
   useEffect(() => {
     setActiveCategory("");
     setSearchQuery(null);
-    localStorage.setItem("newsData", JSON.stringify(newsJson));
+    sessionStorage.setItem("newsData", JSON.stringify(newsJson));
   }, []);
 
   useEffect(() => {
-    const savedData = localStorage.getItem("productData");
+    const savedData = sessionStorage.getItem("productData");
+    const parsed = JSON.parse(savedData);
+    const typeFiltered = parsed.filter((prod) => {
+      const matched = prod.type.toLowerCase().includes("rekomendasi");
+      return matched;
+    });
+
     if (savedData) {
-      setDataToState(JSON.parse(savedData));
-      setFilteredProducts(JSON.parse(savedData));
+      setDataToState(parsed);
+      setFilteredProducts(typeFiltered);
     }
   }, []);
 
-  const filteredProducts = products?.filter((product) => {
+  const filteredProductsSearch = products?.filter((product) => {
     const matchesSearch = product.name
       .toLowerCase()
       .includes(searchQuery?.toLowerCase());
@@ -57,18 +65,15 @@ const Home = () => {
           <BannerGradient />
           <GetingCloserToArrum />
           <CategorySelection category />
-          {/* <ProductTypeSelection /> */}
+          <ProductTypeSelection />
           <div className="mt-5">
-            <ProductContainer
-              showCategory
-              productData={products?.slice(0, 6)}
-            />
+            <ProductContainer showCategory productData={filteredProducts} />
           </div>
         </div>
       </div>
       {searchQuery && (
         <div className="mt-8">
-          <ProductContainer showCategory productData={filteredProducts} />
+          <ProductContainer showCategory productData={filteredProductsSearch} />
         </div>
       )}
     </>
