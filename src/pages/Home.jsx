@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/molecules/Header";
 import BannerGradient from "../components/atoms/BannerGradient";
 import GetingCloserToArrum from "../components/atoms/GetingCloserToArrum";
@@ -17,11 +17,13 @@ const Home = () => {
     setActiveCategory,
     searchQuery,
     setSearchQuery,
+    setOtherSelected,
   } = useMainContext();
 
   useEffect(() => {
     setActiveCategory("");
     setSearchQuery(null);
+    setOtherSelected(false);
     localStorage.setItem("productData", JSON.stringify(productJson));
   }, []);
 
@@ -44,7 +46,7 @@ const Home = () => {
     <>
       <Navbar />
       <Header />
-      <div className={`${searchQuery ? "hidden" : null}`}>
+      <div className={`${searchQuery ? "hidden" : null} overflow-x-hidden`}>
         <div className="mx-5">
           <BannerGradient />
           <GetingCloserToArrum />
