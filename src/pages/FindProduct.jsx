@@ -35,6 +35,18 @@ const FindProduct = () => {
           categoryEdited = "Kopi";
           setActiveCategory("Kopi");
           break;
+        case "kriya":
+          categoryEdited = "Kriya";
+          setActiveCategory("Kriya");
+          break;
+        case "desa-wisata":
+          categoryEdited = "Desa Wisata";
+          setActiveCategory("Desa Wisata");
+          break;
+        case "agrikultur":
+          categoryEdited = "Agrikultur";
+          setActiveCategory("Agrikultur");
+          break;
 
         default:
           break;
@@ -61,17 +73,19 @@ const FindProduct = () => {
   }, [cat, searchQuery]);
 
   return (
-    <div className="mx-5">
-      <div className="-mx-5">
-        <Header />
+    <div className="overflow-x-hidden">
+      <div className="mx-5">
+        <div className="-mx-5">
+          <Header />
+        </div>
+        <div className="mt-5">
+          <CategorySelection selected />
+        </div>
+        <div className="mt-5">
+          <ProductContainer productData={filteredProducts} />
+        </div>
+        <Navbar />
       </div>
-      <div className="mt-5">
-        <CategorySelection selected />
-      </div>
-      <div className="mt-5">
-        <ProductContainer productData={filteredProducts} />
-      </div>
-      <Navbar />
     </div>
   );
 };
