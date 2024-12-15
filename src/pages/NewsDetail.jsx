@@ -17,28 +17,27 @@ const NewsDetail = () => {
       setNews(selected);
     }
   }, []);
+
   return (
-    <>
-      <div>
-        <Header />
-        <div>
-          {news?.img ? (
-            <img
-              src={`/assets/newsImg/${news?.img}`}
-              alt=""
-              className="h-[150px] w-[150px]"
-            />
-          ) : (
-            <img
-              src={`/assets/productImg/no-pict.png`}
-              alt=""
-              className="h-[150px] w-[150px]"
-            />
-          )}
-          <NewsDescription data={news} />
-        </div>
+    <div>
+      <Header />
+      <div className="w-full mt-5 mb-8 flex flex-col items-center"> 
+        {news?.img ? (
+          <img
+            src={`/assets/newsImg/${news?.img}`}
+            alt=""
+            className="object-cover"
+          />
+        ) : (
+          <img
+            src={`/assets/productImg/no-pict.png`}
+            alt=""
+            className="w-[150px] object-cover"
+          />
+        )}
+        <NewsDescription data={news} />
       </div>
-    </>
+    </div>
   );
 };
 

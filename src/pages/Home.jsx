@@ -8,6 +8,7 @@ import ProductContainer from "../components/molecules/ProductContainer";
 import Navbar from "../components/atoms/Navbar";
 import { useMainContext } from "../context/MainContext";
 import productJson from "../data/products.json";
+import newsJson from "../data/news.json";
 
 const Home = () => {
   const {
@@ -25,6 +26,11 @@ const Home = () => {
     setSearchQuery(null);
     setOtherSelected(false);
     localStorage.setItem("productData", JSON.stringify(productJson));
+  }, []);
+  useEffect(() => {
+    setActiveCategory("");
+    setSearchQuery(null);
+    localStorage.setItem("newsData", JSON.stringify(newsJson));
   }, []);
 
   useEffect(() => {
@@ -51,8 +57,13 @@ const Home = () => {
           <BannerGradient />
           <GetingCloserToArrum />
           <CategorySelection category />
-          <ProductTypeSelection />
-          <ProductContainer showCategory productData={products?.slice(0, 6)} />
+          {/* <ProductTypeSelection /> */}
+          <div className="mt-5">
+            <ProductContainer
+              showCategory
+              productData={products?.slice(0, 6)}
+            />
+          </div>
         </div>
       </div>
       {searchQuery && (

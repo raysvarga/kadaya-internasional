@@ -44,12 +44,6 @@ const News = () => {
       default:
         break;
     }
-    // if (newsData) {
-    //   const filtered = newsData?.fiter(
-    //     (news) => (news.category = activeCategory)
-    //   );
-    //   setFilteredNews(filtered);
-    // }
   }, [cat]);
   const navigate = useNavigate();
 
@@ -65,9 +59,6 @@ const News = () => {
         <Header />
         <NewsCategorySelection />
         <div className="flex flex-wrap justify-between gap-4 pb-20 max-w-80 mx-auto">
-          {/* {filteredCategory.map((data, index) => {
-            console.log(data);
-          })} */}
           <NewsContainer data={filteredCategory} />
         </div>
       </div>
