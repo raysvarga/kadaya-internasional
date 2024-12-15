@@ -11,7 +11,7 @@ const FindProduct = () => {
   const [filteredProducts, setFilteredProducts] = useState();
   const { cat } = useParams();
 
-  const productFromLS = localStorage.getItem("productData");
+  const productFromLS = sessionStorage.getItem("productData");
 
   useEffect(() => {
     window.scrollTo(0, 0);

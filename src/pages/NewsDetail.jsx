@@ -7,7 +7,7 @@ const NewsDetail = () => {
   const { id } = useParams();
   const [news, setNews] = useState();
 
-  const newsFromLS = localStorage.getItem("newsData");
+  const newsFromLS = sessionStorage.getItem("newsData");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,7 +21,7 @@ const NewsDetail = () => {
   return (
     <div>
       <Header />
-      <div className="w-full mt-5 mb-8 flex flex-col items-center"> 
+      <div className="w-full mt-5 mb-8 flex flex-col items-center">
         {news?.img ? (
           <img
             src={`/assets/newsImg/${news?.img}`}

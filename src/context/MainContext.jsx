@@ -9,6 +9,7 @@ export const MainContextProvider = ({ children }) => {
   const [activeCategory, setActiveCategory] = useState("");
   const [searchQuery, setSearchQuery] = useState();
   const [otherSelected, setOtherSelected] = useState(false);
+  const [typeSelected, setTypeSelected] = useState("rekomendasi");
 
   const setDataToState = (incomingProducts) => {
     setProducts(incomingProducts);
@@ -24,6 +25,17 @@ export const MainContextProvider = ({ children }) => {
     }
 
     setFilteredProducts(updatedProducts);
+  };
+
+  const updateTypeSelected = (type) => {
+    setTypeSelected(type);
+
+    const typeFiltered = products?.filter((prod) => {
+      const matched = prod.type.toLowerCase().includes(type);
+      return matched;
+    });
+
+    setFilteredProducts(typeFiltered);
   };
 
   const handleCategoryClick = (categorySelected) => {
@@ -45,6 +57,8 @@ export const MainContextProvider = ({ children }) => {
         setSearchQuery,
         otherSelected,
         setOtherSelected,
+        updateTypeSelected,
+        typeSelected,
       }}
     >
       {children}
