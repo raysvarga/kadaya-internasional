@@ -23,6 +23,7 @@ const Home = () => {
   } = useMainContext();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setActiveCategory("");
     setSearchQuery(null);
     setOtherSelected(false);
@@ -60,14 +61,16 @@ const Home = () => {
     <>
       <Navbar />
       <Header />
-      <div className={`${searchQuery ? "hidden" : null} overflow-x-hidden`}>
-        <div className="mx-5">
-          <BannerGradient />
-          <GetingCloserToArrum />
-          <CategorySelection category />
-          <ProductTypeSelection />
-          <div className="mt-5">
-            <ProductContainer showCategory productData={filteredProducts} />
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div className={`${searchQuery ? "hidden" : null} overflow-x-hidden`}>
+          <div className="mx-5">
+            <BannerGradient />
+            <GetingCloserToArrum />
+            <CategorySelection category />
+            <ProductTypeSelection />
+            <div className="mt-5">
+              <ProductContainer showCategory productData={filteredProducts} />
+            </div>
           </div>
         </div>
       </div>

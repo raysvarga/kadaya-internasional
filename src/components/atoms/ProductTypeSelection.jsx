@@ -12,12 +12,16 @@ const ProductTypeSelection = () => {
       >
         {typeSelected === "rekomendasi" ? (
           <>
-            <p className="text-[#ff914d] text-xs font-medium">Rekomendasi</p>
+            <p className="text-[#ff914d] text-xs font-medium cursor-pointer">
+              Rekomendasi
+            </p>
             <p className="w-[6px] h-[6px] bg-[#ff914d] rounded-full mt-1"></p>
           </>
         ) : (
           <>
-            <p className="text-xs opacity-40 font-medium">Rekomendasi</p>
+            <p className="text-xs opacity-40 font-medium cursor-pointer">
+              Rekomendasi
+            </p>
           </>
         )}
       </div>
@@ -27,12 +31,16 @@ const ProductTypeSelection = () => {
       >
         {typeSelected === "produk inovasi" ? (
           <>
-            <p className="text-[#ff914d] text-xs font-medium">Produk Inovasi</p>
+            <p className="text-[#ff914d] text-xs font-medium cursor-pointer">
+              Produk Inovasi
+            </p>
             <p className="w-[6px] h-[6px] bg-[#ff914d] rounded-full mt-1"></p>
           </>
         ) : (
           <>
-            <p className="text-xs opacity-40 font-medium">Produk Inovasi</p>
+            <p className="text-xs opacity-40 font-medium cursor-pointer">
+              Produk Inovasi
+            </p>
           </>
         )}
       </div>
@@ -42,14 +50,16 @@ const ProductTypeSelection = () => {
       >
         {typeSelected === "produk unggulan" ? (
           <>
-            <p className="text-[#ff914d] text-xs font-medium">
+            <p className="text-[#ff914d] text-xs font-medium cursor-pointer">
               Produk Unggulan
             </p>
             <p className="w-[6px] h-[6px] bg-[#ff914d] rounded-full mt-1"></p>
           </>
         ) : (
           <>
-            <p className="text-xs opacity-40 font-medium">Produk Unggulan</p>
+            <p className="text-xs opacity-40 font-medium cursor-pointer">
+              Produk Unggulan
+            </p>
           </>
         )}
       </div>
