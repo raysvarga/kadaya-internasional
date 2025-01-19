@@ -17,6 +17,7 @@ const News = () => {
   const [filteredNews, setFilteredNews] = useState();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setNewsData(newsJson);
     let categoryEdited = "";
     switch (cat) {
@@ -56,7 +57,9 @@ const News = () => {
       <div>
         <Navbar />
         <Header />
-        <NewsCategorySelection />
+        <div data-aos="fade-right" data-aos-duration="1000">
+          <NewsCategorySelection />
+        </div>
         <div className="flex flex-wrap justify-between gap-4 pb-20 max-w-80 mx-auto">
           <NewsContainer data={filteredCategory} />
         </div>

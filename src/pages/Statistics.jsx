@@ -16,6 +16,7 @@ const Statistics = () => {
   });
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetch("/data/statistics.json")
       .then((response) => response.json())
       .then((data) => setStatistics(data))
@@ -57,7 +58,11 @@ const Statistics = () => {
           </p>
         </div>
 
-        <div className="bg-white mt-3 p-4 rounded-xl shadow-sm">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className="bg-white mt-3 p-4 rounded-xl shadow-sm"
+        >
           <div className="-mt-2">
             {statistics.data.length > 0 && (
               <Chart
@@ -91,7 +96,11 @@ const Statistics = () => {
           </div>
         </div>
 
-        <div className="flex gap-2 mt-3">
+        <div
+          className="flex gap-2 mt-3"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
           <div className="bg-white shadow-sm p-3 rounded-xl">
             <img src={triangle} alt="" className="w-28 mx-auto" />
             <div className="bg-[#231f20] text-white mx-auto rounded-xl p-3 mt-3 w-fit">
@@ -100,8 +109,8 @@ const Statistics = () => {
               </h4>
               <p className="text-xs mt-[2px] text-center mx-auto">
                 Kluster perikanan merupakan salah satu fokus utama kami dalam
-                meningkatkan taraf hidup masyarakat melalui program-program
-                yang berkelanjutan dan inovatif.
+                meningkatkan taraf hidup masyarakat melalui program-program yang
+                berkelanjutan dan inovatif.
               </p>
             </div>
           </div>
@@ -122,15 +131,19 @@ const Statistics = () => {
                 Kluster <br /> Perikanan
               </h4>
               <p className="text-xs mt-[2px] text-center mx-auto">
-                Kluster perikanan adalah area fokus utama dalam usaha kami
-                untuk meningkatkan ekonomi lokal melalui pendekatan inovatif
-                dan berkelanjutan.
+                Kluster perikanan adalah area fokus utama dalam usaha kami untuk
+                meningkatkan ekonomi lokal melalui pendekatan inovatif dan
+                berkelanjutan.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="p-6 mt-3 bg-white rounded-xl shadow-sm">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="p-6 mt-3 bg-white rounded-xl shadow-sm"
+        >
           <p className="font-semibold">Data 2023</p>
           <div>
             {statistics.data2023.length > 0 && (
@@ -153,7 +166,11 @@ const Statistics = () => {
           </div>
         </div>
 
-        <div className="p-6 mt-3 bg-white rounded-xl shadow-sm">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="p-6 mt-3 bg-white rounded-xl shadow-sm"
+        >
           <p className="font-semibold">Data 2024</p>
           <div>
             {statistics.data2024.length > 0 && (
