@@ -58,11 +58,7 @@ const Statistics = () => {
           </p>
         </div>
 
-        <div
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          className="bg-white mt-3 p-4 rounded-xl shadow-sm"
-        >
+        <div className="bg-white mt-3 p-4 rounded-xl shadow-sm">
           <div className="-mt-2">
             {statistics.data.length > 0 && (
               <Chart
@@ -99,7 +95,7 @@ const Statistics = () => {
         <div
           className="flex gap-2 mt-3"
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="2000"
         >
           <div className="bg-white shadow-sm p-3 rounded-xl">
             <img src={triangle} alt="" className="w-28 mx-auto" />
@@ -141,7 +137,7 @@ const Statistics = () => {
 
         <div
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="2000"
           className="p-6 mt-3 bg-white rounded-xl shadow-sm"
         >
           <p className="font-semibold">Data 2023</p>
@@ -168,7 +164,7 @@ const Statistics = () => {
 
         <div
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="2000"
           className="p-6 mt-3 bg-white rounded-xl shadow-sm"
         >
           <p className="font-semibold">Data 2024</p>
