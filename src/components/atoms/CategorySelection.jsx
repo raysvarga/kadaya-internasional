@@ -1,18 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useMainContext } from "../../context/MainContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import ModalProductCategory from "./ModalProductCategory";
 
 const CategorySelection = ({ category, selected }) => {
   const { setSearchQuery } = useMainContext();
-  const { activeCategory } = useMainContext();
+  const { activeCategory, setActiveCategory, otherSelected, setOtherSelected } =
+    useMainContext();
   const navigate = useNavigate();
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setSearchQuery(null);
   }, []);
 
+  useEffect(() => {
+    setActiveCategory("");
+  }, [otherSelected]);
+
   return (
-    <div>
+    <div className="relative">
+      <ModalProductCategory isVisible={isVisible} setState={setIsVisible} />
       <div className="px-2 mt-4">
         <h2 className={`font-semibold text-lg ${category ? null : "hidden"}`}>
           Category
@@ -25,6 +33,7 @@ const CategorySelection = ({ category, selected }) => {
               }`}
               onClick={() => {
                 navigate("/find/ikan-segar");
+                setOtherSelected(false);
               }}
             >
               <svg
@@ -48,6 +57,7 @@ const CategorySelection = ({ category, selected }) => {
             <button
               onClick={() => {
                 navigate("/find/olahan-ikan");
+                setOtherSelected(false);
               }}
               className={`w-12 h-12 ${
                 activeCategory === "Olahan Ikan" ? "bg-red-600" : null
@@ -75,6 +85,7 @@ const CategorySelection = ({ category, selected }) => {
             <button
               onClick={() => {
                 navigate("/find/rumput-laut");
+                setOtherSelected(false);
               }}
               className={`w-12 h-12 ${
                 activeCategory === "Rumput Laut" ? "bg-red-600" : null
@@ -105,6 +116,7 @@ const CategorySelection = ({ category, selected }) => {
             <button
               onClick={() => {
                 navigate("/find/kopi");
+                setOtherSelected(false);
               }}
               className={`w-12 h-12 ${
                 activeCategory === "Kopi" ? "bg-red-600" : null
@@ -127,8 +139,15 @@ const CategorySelection = ({ category, selected }) => {
             </button>
             <p className="text-xs mt-2 text-center">Kopi</p>
           </div>
-          <div className="flex flex-col items-center w-fit">
-            <button className="w-12 h-12 bg-[#0795ff] rounded-full grid place-content-center">
+          <div
+            className="flex flex-col items-center w-fit"
+            onClick={() => setIsVisible(!isVisible)}
+          >
+            <button
+              className={`w-12 h-12 ${
+                otherSelected ? "bg-red-600" : "bg-[#0795ff]"
+              } rounded-full grid place-content-center`}
+            >
               <svg
                 width="64px"
                 height="64px"
@@ -165,7 +184,6 @@ const CategorySelection = ({ category, selected }) => {
                     transform="rotate(90 6 12)"
                     fill="#ffffff"
                   ></circle>
-                   
                 </g>
               </svg>
             </button>

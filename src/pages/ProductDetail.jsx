@@ -7,7 +7,7 @@ const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState();
 
-  const productFromLS = localStorage.getItem("productData");
+  const productFromLS = sessionStorage.getItem("productData");
 
   useEffect(() => {
     window.scrollTo(0, 0);

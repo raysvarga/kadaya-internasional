@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/molecules/Header";
 import BannerGradient from "../components/atoms/BannerGradient";
 import GetingCloserToArrum from "../components/atoms/GetingCloserToArrum";
@@ -14,32 +14,43 @@ const Home = () => {
   const {
     setDataToState,
     setFilteredProducts,
+    filteredProducts,
     products,
     setActiveCategory,
     searchQuery,
     setSearchQuery,
+    setOtherSelected,
   } = useMainContext();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setActiveCategory("");
     setSearchQuery(null);
-    localStorage.setItem("productData", JSON.stringify(productJson));
-  }, []);
-  useEffect(() => {
-    setActiveCategory("");
-    setSearchQuery(null);
-    localStorage.setItem("newsData", JSON.stringify(newsJson));
+    setOtherSelected(false);
+    sessionStorage.setItem("productData", JSON.stringify(productJson));
   }, []);
 
   useEffect(() => {
-    const savedData = localStorage.getItem("productData");
+    setActiveCategory("");
+    setSearchQuery(null);
+    sessionStorage.setItem("newsData", JSON.stringify(newsJson));
+  }, []);
+
+  useEffect(() => {
+    const savedData = sessionStorage.getItem("productData");
+    const parsed = JSON.parse(savedData);
+    const typeFiltered = parsed.filter((prod) => {
+      const matched = prod.type.toLowerCase().includes("rekomendasi");
+      return matched;
+    });
+
     if (savedData) {
-      setDataToState(JSON.parse(savedData));
-      setFilteredProducts(JSON.parse(savedData));
+      setDataToState(parsed);
+      setFilteredProducts(typeFiltered);
     }
   }, []);
 
-  const filteredProducts = products?.filter((product) => {
+  const filteredProductsSearch = products?.filter((product) => {
     const matchesSearch = product.name
       .toLowerCase()
       .includes(searchQuery?.toLowerCase());
@@ -50,23 +61,22 @@ const Home = () => {
     <>
       <Navbar />
       <Header />
-      <div className={`${searchQuery ? "hidden" : null}`}>
-        <div className="mx-5">
-          <BannerGradient />
-          <GetingCloserToArrum />
-          <CategorySelection category />
-          {/* <ProductTypeSelection /> */}
-          <div className="mt-5">
-            <ProductContainer
-              showCategory
-              productData={products?.slice(0, 6)}
-            />
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div className={`${searchQuery ? "hidden" : null} overflow-x-hidden`}>
+          <div className="mx-5">
+            <BannerGradient />
+            <GetingCloserToArrum />
+            <CategorySelection category />
+            <ProductTypeSelection />
+            <div className="mt-5">
+              <ProductContainer showCategory productData={filteredProducts} />
+            </div>
           </div>
         </div>
       </div>
       {searchQuery && (
         <div className="mt-8">
-          <ProductContainer showCategory productData={filteredProducts} />
+          <ProductContainer showCategory productData={filteredProductsSearch} />
         </div>
       )}
     </>
