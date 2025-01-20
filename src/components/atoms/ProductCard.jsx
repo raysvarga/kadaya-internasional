@@ -150,7 +150,7 @@ const ProductCard = (props) => {
           />
           <path fill="none" stroke="none" d="M0 0h36v36H0z" />
         </svg>
-        {props.cert?.map((data, index) => (
+        {props.cert?.slice(0, 3).map((data, index) => (
           <p
             key={index}
             className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1"
