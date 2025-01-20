@@ -4,7 +4,7 @@ import ProductCard from "../atoms/ProductCard";
 const ProductContainer = ({ showCategory, productData }) => {
   return (
     <div>
-      <div className="flex flex-wrap justify-between gap-4 pb-20 max-w-80 mx-auto">
+      <div className="flex flex-wrap justify-between gap-4 max-w-80 mx-auto">
         {productData?.map((data, index) => (
           <ProductCard
             key={index}

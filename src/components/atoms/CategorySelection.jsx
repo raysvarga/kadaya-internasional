@@ -56,11 +56,11 @@ const CategorySelection = ({ category, selected }) => {
           <div className="flex flex-col items-center w-fit">
             <button
               onClick={() => {
-                navigate("/find/olahan-ikan");
+                navigate("/find/produk-olahan");
                 setOtherSelected(false);
               }}
               className={`w-12 h-12 ${
-                activeCategory === "Olahan Ikan" ? "bg-red-600" : null
+                activeCategory === "Produk Olahan" ? "bg-red-600" : null
               } bg-[#0795ff] rounded-full grid place-content-center`}
             >
               <svg
@@ -78,7 +78,7 @@ const CategorySelection = ({ category, selected }) => {
               </svg>
             </button>
             <p className="text-xs mt-2 text-center">
-              Olahan <br /> Ikan
+              Produk <br /> Olahan
             </p>
           </div>
           <div className="flex flex-col items-center w-fit">

@@ -197,7 +197,7 @@ const AboutContainer = () => {
         desc={
           <>
             <p>
-              PT Arrum Samudra Nusantara Berdiri Sejak 2023, Saat ini telah
+              PT Arsadaya Samudra Nusantara Berdiri Sejak 2023, Saat ini telah
               memiliki 3 Kluster Binaan:
             </p>
             <div>

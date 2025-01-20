@@ -150,14 +150,21 @@ const ProductCard = (props) => {
           />
           <path fill="none" stroke="none" d="M0 0h36v36H0z" />
         </svg>
-        {props.cert?.map((data, index) => (
-          <p
-            key={index}
-            className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1"
-          >
-            {data}
+        <div className="flex flex-col gap-1">
+          <p className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1">
+            {props.cert[0]} {/* First item (left aligned) */}
           </p>
-        ))}
+          <div className="flex gap-1">
+            {props.cert.slice(1).map((data, index) => (
+              <p
+                key={index}
+                className="text-[10px] text-white bg-[#f7cd3c] w-fit rounded-full px-1"
+              >
+                {data} {/* Subsequent items stacked below */}
+              </p>
+            ))}
+          </div>
+        </div>
       </div>
     </Link>
   );

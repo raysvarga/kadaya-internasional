@@ -7,10 +7,10 @@ const GetingCloserToArrum = () => {
     <div className="mt-5 flex items-center px-3">
       <div>
         <h3 className="text-2xl font-medium leading-7">
-          Mengenal lebih <br /> dekat Arrum
+          Mengenal lebih <br /> dekat Arsadaya
         </h3>
         <p className="text-xs mt-1">
-          <Link to={"/about"} className="text-[#0795ff] font-medium underline">Klik disini</Link> untuk mengenal lebih dekat tentang Arrum Samudra Nusantara
+          <Link to={"/about"} className="text-[#0795ff] font-medium underline">Klik disini</Link> untuk mengenal lebih dekat tentang Arsadaya Samudra Nusantara
         </p>
       </div>
       <Link to={"/about"} className="grow-0 shrink-0">

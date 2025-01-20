@@ -49,12 +49,12 @@ const Statistics = () => {
       <div className="mt-5 mx-5">
         <div>
           <h2 className="text-2xl font-bold leading-tight">
-            Arrum Samudra <br /> dalam Angka
+            Arsadaya Samudra <br /> dalam Angka
           </h2>
           <p className="text-xs mt-1 w-72">
             Menyajikan data dan statistik terkini mengenai berbagai program yang
-            telah dilakukan oleh Arrum Samudra. Dari peningkatan kesejahteraan
-            masyarakat hingga distribusi produk perikanan.
+            telah dilakukan oleh Arsadaya Samudra. Dari peningkatan
+            kesejahteraan masyarakat hingga distribusi produk perikanan.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ const Statistics = () => {
           <h4 className="font-medium mt-2">Masyarakat Terpapar Program</h4>
           <p className="text-xs mt-1">
             Grafik ini menunjukkan persentase masyarakat yang telah terpapar
-            oleh berbagai program yang dilaksanakan oleh Arrum Samudra.
+            oleh berbagai program yang dilaksanakan oleh Arsadaya Samudra.
             Menyediakan wawasan tentang jangkauan dan dampak program terhadap
             komunitas lokal.
           </p>
