@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "DSA Arrum Berbagi Pinbox",
+    "created_by": "Arrum Samudra",
+    "desc": "Desa Sejahtera Astra (DSA) telah meluncurkan sebuah inisiatif baru yang disebut Arrum Berbagi Pinbox. Dalam upaya untuk memperkuat solidaritas dan membantu komunitas, DSA membagikan Pinbox kepada warga yang membutuhkan. Pinbox ini berisi berbagai perlengkapan dan barang-barang penting yang diharapkan dapat meringankan beban masyarakat, terutama di tengah situasi yang menantang. Kegiatan ini merupakan bagian dari komitmen Astra untuk mendukung kesejahteraan dan pembangunan berkelanjutan di desa-desa binaannya. Dengan dukungan dari berbagai pihak, DSA berharap inisiatif ini tidak hanya memberikan bantuan praktis, tetapi juga menyebarkan semangat kepedulian dan gotong royong di seluruh lapisan masyarakat. Acara ini mendapatkan sambutan positif dari warga desa yang merasa sangat terbantu dengan adanya bantuan ini. Mereka berharap kegiatan semacam ini bisa terus berlanjut di masa depan.",
+    "category": "Berita Terkini",
+    "img": "berita-1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Pelatihan Pembuatan Produk Olahan Ikan",
+    "created_by": "Arrum Samudra",
+    "desc": "Pelatihan ini bertujuan untuk meningkatkan keterampilan UMKM dalam mengolah produk perikanan menjadi produk bernilai tambah. Peserta pelatihan akan diajarkan berbagai teknik pengolahan ikan yang inovatif, termasuk cara membuat nugget ikan, abon ikan, dan kerupuk ikan. Selain itu, mereka juga akan diberikan pengetahuan tentang cara mengemas produk dengan baik agar memiliki daya tarik di pasar. Pelatihan ini diharapkan dapat meningkatkan pendapatan para pelaku UMKM perikanan dan membantu mereka untuk bersaing di pasar yang lebih luas. Narasumber pelatihan ini adalah ahli pengolahan ikan dari berbagai universitas dan lembaga riset yang berpengalaman di bidangnya.",
+    "category": "Pelatihan",
+    "img": ""
+  },
+  {
+    "id": 3,
+    "title": "Event Expo UMKM Jepara",
+    "created_by": "Arrum Samudra",
+    "desc": "Expo ini memberikan kesempatan bagi UMKM di Jepara untuk memamerkan produk-produk unggulan mereka dan menarik minat investor. Acara ini diikuti oleh puluhan UMKM dari berbagai sektor, mulai dari kerajinan tangan, makanan, hingga produk tekstil. Selain pameran produk, acara ini juga diramaikan dengan berbagai workshop dan seminar yang bertujuan untuk memberikan wawasan baru bagi para pelaku UMKM. Expo ini juga menjadi ajang untuk menjalin kerjasama antara UMKM dengan berbagai pihak, seperti investor, pemerintah daerah, dan lembaga pendukung UMKM. Pengunjung yang datang ke expo ini tidak hanya berasal dari Jepara, tetapi juga dari kota-kota lain di Indonesia.",
+    "category": "Event",
+    "img": ""
+  },
+  {
+    "id": 4,
+    "title": "Pendampingan UMKM Perikanan",
+    "created_by": "Arrum Samudra",
+    "desc": "Program pendampingan ini difokuskan pada pengembangan kapasitas UMKM perikanan untuk meningkatkan produksi dan pemasaran. Dalam program ini, para peserta akan mendapatkan bimbingan langsung dari mentor-mentor berpengalaman di bidang perikanan. Mereka akan diajarkan berbagai aspek mulai dari teknik budidaya ikan yang efisien, pengolahan hasil perikanan, hingga strategi pemasaran yang efektif. Program ini juga mencakup pendampingan dalam hal pengelolaan keuangan dan administrasi usaha. Dengan adanya program ini, diharapkan para pelaku UMKM perikanan dapat meningkatkan produktivitas dan daya saing mereka di pasar lokal maupun internasional.",
+    "category": "Pendampingan",
+    "img": ""
+  },
+  {
+    "id": 5,
+    "title": "Inovasi Produk Perikanan di Jepara",
+    "created_by": "Arrum Samudra",
+    "desc": "Artikel ini membahas berbagai inovasi terbaru dalam produk perikanan yang dapat diterapkan oleh UMKM di Jepara. Inovasi-inovasi tersebut meliputi teknik pengolahan ikan yang lebih modern, penggunaan teknologi dalam budidaya ikan, hingga diversifikasi produk perikanan untuk meningkatkan nilai jual. Salah satu inovasi yang dibahas adalah pembuatan produk olahan ikan yang ramah lingkungan dengan memanfaatkan limbah perikanan. Selain itu, artikel ini juga mengangkat kisah sukses beberapa UMKM perikanan di Jepara yang berhasil menerapkan inovasi tersebut dan mendapatkan keuntungan yang signifikan. Diharapkan, artikel ini dapat menginspirasi UMKM lainnya untuk terus berinovasi dan berkembang.",
+    "category": "Berita Terkini",
+    "img": ""
+  },
+  {
+    "id": 6,
+    "title": "Seminar Meningkatkan Kualitas Produk Perikanan",
+    "created_by": "Arrum Samudra",
+    "desc": "Seminar ini mengundang pakar untuk berbagi pengetahuan dan teknik dalam meningkatkan kualitas produk perikanan. Dalam seminar ini, peserta akan mendapatkan informasi tentang berbagai standar kualitas produk perikanan yang berlaku di pasar internasional. Para pakar juga akan memberikan tips dan trik tentang cara menjaga kesegaran ikan, teknik pengolahan yang baik, serta cara mengemas produk agar menarik bagi konsumen. Selain itu, seminar ini juga membahas pentingnya sertifikasi produk perikanan dan bagaimana cara memperolehnya. Dengan mengikuti seminar ini, diharapkan para pelaku UMKM perikanan dapat meningkatkan kualitas produk mereka sehingga dapat bersaing di pasar global.",
+    "category": "Pelatihan",
+    "img": ""
+  }
+]
