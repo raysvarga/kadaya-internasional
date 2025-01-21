@@ -70,7 +70,7 @@ const Statistics = () => {
               />
             )}
           </div>
-          <StatisticDots />
+          <StatisticDots data={statistics.data} />
           <h4 className="font-medium mt-2">Masyarakat Terpapar Program</h4>
           <p className="text-xs mt-1">
             Grafik ini menunjukkan persentase masyarakat yang telah terpapar
