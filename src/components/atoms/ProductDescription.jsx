@@ -3,18 +3,32 @@ import React from "react";
 const ProductDescription = ({ data }) => {
   return (
     <div className="h-[400px] mt-4">
-      <div className="bg-[#0795ff] h-20">
+      <div
+        className={`bg-[#0795ff] ${data?.name.length > 20 ? "h-24" : "h-20"}`}
+      >
         <div className="flex items-center pt-3 px-4 text-white ">
-          <h3 className="text-lg font-bold">{data?.name}</h3>
+          <h3
+            className={`text-lg font-bold ${
+              data?.name.length > 20 ? "max-w-48" : null
+            }`}
+          >
+            {data?.name}
+          </h3>
           <p className="mx-2">|</p>
           <p className="text-sm">{data?.category}</p>
         </div>
       </div>
-      <div className="relative z-10 -top-7 bg-gradient-to-b from-white from-90% to-[#fafafa] rounded-t-3xl p-6 h-full">
+      <div
+        className={`relative z-10 ${
+          data?.name.length > 20 ? "-top-5" : "-top-7"
+        } bg-gradient-to-b from-white from-90% to-[#fafafa] rounded-t-3xl p-6 h-full`}
+      >
         <div>
-          <h2 className="text-xl font-extrabold">{`Rp ${data?.price.toLocaleString(
-            "id-ID"
-          )}`}</h2>
+          <h2 className="text-xl font-extrabold">
+            {data?.price === 0
+              ? "Rp -"
+              : `Rp ${data?.price.toLocaleString("id-ID")}`}
+          </h2>
         </div>
         <div>
           <div className="flex gap-1 items-center mt-1">

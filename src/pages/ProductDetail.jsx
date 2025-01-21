@@ -7,15 +7,24 @@ const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState();
 
-  const productFromLS = sessionStorage.getItem("productData");
+  const fetchData = async () => {
+    try {
+      const response = await fetch("/data/products.json"); // Tunggu fetch selesai
+      const data = await response.json(); // Tunggu parsing JSON selesai
+
+      if (data) {
+        const selected = data.find((item) => item.id === parseInt(id));
+        setProduct(selected);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (productFromLS) {
-      const parsed = JSON.parse(productFromLS);
-      const selected = parsed.find((item) => item.id === parseInt(id));
-      setProduct(selected);
-    }
+
+    fetchData();
   }, []);
 
   return (

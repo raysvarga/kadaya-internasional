@@ -3,7 +3,7 @@ import Navbar from "../components/atoms/Navbar";
 import Header from "../components/molecules/Header";
 import NewsCategorySelection from "../components/atoms/NewsCategorySelection";
 import NewsCard from "../components/atoms/NewsCard";
-import newsJson from "../data/news.json";
+// import newsJson from "../data/news.json";
 import { useNavigate, useParams } from "react-router-dom";
 import NewsContainer from "../components/molecules/NewsContainer";
 
@@ -16,41 +16,51 @@ const News = () => {
 
   const [filteredNews, setFilteredNews] = useState();
 
+  const fetchData = async () => {
+    try {
+      const response = await fetch("/data/news.json"); // Tunggu fetch selesai
+      const data = await response.json(); // Tunggu parsing JSON selesai
+
+      let categoryEdited = "";
+      switch (cat) {
+        case "berita-terkini":
+          setNewsData(
+            data.filter((product) => product.category === "Berita Terkini")
+          );
+          break;
+        case "pelatihan":
+          setNewsData(
+            data.filter((product) => product.category === "Pelatihan")
+          );
+          break;
+        case "pendampingan":
+          setNewsData(
+            data.filter((product) => product.category === "Pendampingan")
+          );
+          break;
+        case "event":
+          setNewsData(data.filter((product) => product.category === "Event"));
+          break;
+        case "inovasi-desa":
+          setNewsData(
+            data.filter((product) => product.category === "Inovasi Desa")
+          );
+          break;
+
+        default:
+          break;
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    setNewsData(newsJson);
-    let categoryEdited = "";
-    switch (cat) {
-      case "berita-terkini":
-        categoryEdited = "Berita Terkini";
-        setActiveCategory("Berita Terkini");
-        break;
-      case "pelatihan":
-        categoryEdited = "Pelatihan";
-        setActiveCategory("Pelatihan");
-        break;
-      case "pendampingan":
-        categoryEdited = "Pendampingan";
-        setActiveCategory("Pendampingan");
-        break;
-      case "event":
-        categoryEdited = "Event";
-        setActiveCategory("Event");
-        break;
-      case "inovasi-desa":
-        categoryEdited = "Inovasi Desa";
-        setActiveCategory("Inovasi Desa");
-        break;
 
-      default:
-        break;
-    }
+    fetchData();
   }, [cat]);
   const navigate = useNavigate();
-
-  const filteredCategory = newsJson.filter(
-    (product) => product.category === activeCategory
-  );
 
   return (
     <>
@@ -61,7 +71,7 @@ const News = () => {
           <NewsCategorySelection />
         </div>
         <div className="flex flex-wrap justify-between gap-4 pb-20 max-w-80 mx-auto">
-          <NewsContainer data={filteredCategory} />
+          {newsData ? <NewsContainer data={newsData} /> : null}
         </div>
       </div>
     </>

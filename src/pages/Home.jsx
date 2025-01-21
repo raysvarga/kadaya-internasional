@@ -27,27 +27,44 @@ const Home = () => {
     setActiveCategory("");
     setSearchQuery(null);
     setOtherSelected(false);
-    sessionStorage.setItem("productData", JSON.stringify(productJson));
+    // sessionStorage.setItem("productData", JSON.stringify(productJson));
   }, []);
 
   useEffect(() => {
     setActiveCategory("");
     setSearchQuery(null);
-    sessionStorage.setItem("newsData", JSON.stringify(newsJson));
+    // sessionStorage.setItem("newsData", JSON.stringify(newsJson));
   }, []);
 
   useEffect(() => {
-    const savedData = sessionStorage.getItem("productData");
-    const parsed = JSON.parse(savedData);
-    const typeFiltered = parsed.filter((prod) => {
-      const matched = prod.type.toLowerCase().includes("rekomendasi");
-      return matched;
-    });
+    // const savedData = sessionStorage.getItem("productData");
+    // const parsed = JSON.parse(savedData);
+    // const typeFiltered = parsed.filter((prod) => {
+    //   const matched = prod.type.toLowerCase().includes("rekomendasi");
+    //   return matched;
+    // });
 
-    if (savedData) {
-      setDataToState(parsed);
-      setFilteredProducts(typeFiltered);
-    }
+    fetch(`/data/products.json`)
+      .then((response) => response.json())
+      .then((data) => {
+        setDataToState(data);
+        const typeFiltered = data.filter((prod) => {
+          const matched = prod.type.toLowerCase().includes("rekomendasi");
+          return matched;
+        });
+        return typeFiltered;
+      })
+      .then((filterd) => {
+        setFilteredProducts(filterd);
+      })
+      .catch((error) =>
+        console.error("Error fetching statistics data:", error)
+      );
+
+    // if (savedData) {
+    //   setDataToState(parsed);
+    //   setFilteredProducts(typeFiltered);
+    // }
   }, []);
 
   const filteredProductsSearch = products?.filter((product) => {

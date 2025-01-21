@@ -13,64 +13,83 @@ const FindProduct = () => {
   const [productsPerPage] = useState(6); // Menampilkan 6 produk per halaman
   const { cat } = useParams();
 
-  const productFromLS = sessionStorage.getItem("productData");
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch("/data/products.json"); // Tunggu fetch selesai
+      const data = await response.json(); // Tunggu parsing JSON selesai
+      const productFromLS = JSON.stringify(data); // Tunggu stringified selesai
+
+      if (productFromLS) {
+        let categoryEdited = "";
+
+        switch (cat) {
+          case "ikan-segar":
+            categoryEdited = "Ikan Segar";
+            setActiveCategory("Ikan Segar");
+            break;
+          case "produk-olahan":
+            categoryEdited = "Produk Olahan";
+            setActiveCategory("Produk Olahan");
+            break;
+          case "rumput-laut":
+            categoryEdited = "Rumput Laut";
+            setActiveCategory("Rumput Laut");
+            break;
+          case "kopi":
+            categoryEdited = "Kopi";
+            setActiveCategory("Kopi");
+            break;
+          case "kriya":
+            categoryEdited = "Kriya";
+            setActiveCategory("Kriya");
+            break;
+          case "desa-wisata":
+            categoryEdited = "Desa Wisata";
+            setActiveCategory("Desa Wisata");
+            break;
+          case "agrikultur":
+            categoryEdited = "Agrikultur";
+            setActiveCategory("Agrikultur");
+            break;
+          default:
+            break;
+        }
+
+        const parsed = JSON.parse(productFromLS);
+        const filteredCategory = parsed.filter(
+          (product) => product.category === categoryEdited
+        );
+        const matchesSearch = filteredCategory?.filter((product) => {
+          const matched = product.name
+            .toLowerCase()
+            .includes(searchQuery?.toLowerCase());
+
+          if (searchQuery) {
+            return matched;
+          } else {
+            return product;
+          }
+        });
+
+        setFilteredProducts(matchesSearch);
+      }
+    } catch (error) {
+      console.error("Error fetching statistics data:", error);
+    }
+
+    // fetch("/data/products.json")
+    //   .then((response) => response.json())
+    //   .then((data) => JSON.stringify(data))
+    //   .then((stringifiedData) => setProductFromLS(stringifiedData))
+    //   .catch((error) =>
+    //     console.error("Error fetching statistics data:", error)
+    //   );
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (productFromLS) {
-      let categoryEdited = "";
 
-      switch (cat) {
-        case "ikan-segar":
-          categoryEdited = "Ikan Segar";
-          setActiveCategory("Ikan Segar");
-          break;
-        case "produk-olahan":
-          categoryEdited = "Produk Olahan";
-          setActiveCategory("Produk Olahan");
-          break;
-        case "rumput-laut":
-          categoryEdited = "Rumput Laut";
-          setActiveCategory("Rumput Laut");
-          break;
-        case "kopi":
-          categoryEdited = "Kopi";
-          setActiveCategory("Kopi");
-          break;
-        case "kriya":
-          categoryEdited = "Kriya";
-          setActiveCategory("Kriya");
-          break;
-        case "desa-wisata":
-          categoryEdited = "Desa Wisata";
-          setActiveCategory("Desa Wisata");
-          break;
-        case "agrikultur":
-          categoryEdited = "Agrikultur";
-          setActiveCategory("Agrikultur");
-          break;
-        default:
-          break;
-      }
-
-      const parsed = JSON.parse(productFromLS);
-      const filteredCategory = parsed.filter(
-        (product) => product.category === categoryEdited
-      );
-      const matchesSearch = filteredCategory?.filter((product) => {
-        const matched = product.name
-          .toLowerCase()
-          .includes(searchQuery?.toLowerCase());
-
-        if (searchQuery) {
-          return matched;
-        } else {
-          return product;
-        }
-      });
-
-      setFilteredProducts(matchesSearch);
-    }
+    fetchProducts();
   }, [cat, searchQuery]);
 
   // Menghitung produk yang ditampilkan pada halaman saat ini

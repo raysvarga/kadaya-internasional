@@ -7,15 +7,24 @@ const NewsDetail = () => {
   const { id } = useParams();
   const [news, setNews] = useState();
 
-  const newsFromLS = sessionStorage.getItem("newsData");
+  const fetchData = async () => {
+    try {
+      const response = await fetch("/data/news.json"); // Tunggu fetch selesai
+      const data = await response.json(); // Tunggu parsing JSON selesai
+
+      if (data) {
+        const selected = data.find((item) => item.id === parseInt(id));
+        setNews(selected);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (newsFromLS) {
-      const parsed = JSON.parse(newsFromLS);
-      const selected = parsed.find((item) => item.id === parseInt(id));
-      setNews(selected);
-    }
+
+    fetchData();
   }, []);
 
   return (
