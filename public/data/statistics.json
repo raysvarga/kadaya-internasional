@@ -1,11 +1,11 @@
 {
   "data": [
     ["Project", "Value"],
-    ["Project 1", 10],
-    ["Project 2", 10],
+    ["Project 1", 30],
+    ["Project 2", 20],
     ["Project 3", 10],
-    ["Project 4", 10],
-    ["Project 5", 10]
+    ["Project 4", 5],
+    ["Project 5", 25]
   ],
   "data2023": [
     ["Month", "Value", { "role": "style" }],
