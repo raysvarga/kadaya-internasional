@@ -192,7 +192,7 @@ const AboutContainer = () => {
   return (
     <div className="pb-20">
       <AboutCard
-        title="Tentang Arrum"
+        title="Tentang Arsadaya"
         svg={AboutIcon}
         desc={
           <>
