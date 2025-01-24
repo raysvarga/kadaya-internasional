@@ -28,8 +28,8 @@ const NewsCard = ({ data }) => {
           : data.title}
       </h4>
       <p className="text-[10px] opacity-70 leading-tight mt-2">
-        {data?.desc.length > 30
-          ? `${data.desc.substring(0, 30)}...`
+        {data?.desc.length > 100
+          ? `${data.desc.substring(0, 100)}...`
           : data.desc}
       </p>
     </Link>

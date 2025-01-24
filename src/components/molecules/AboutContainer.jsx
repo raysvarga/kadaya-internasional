@@ -2,7 +2,10 @@ import React from "react";
 import AboutCard from "../atoms/AboutCard";
 import PartnerCard from "../atoms/PartnerCard";
 import Astra from "../../assets/img/astra.png";
-import KBA from "../../assets/img/kampung-berseri-astra.png";
+import KBA from "../../assets/img/kampung-berseri-astra.jpg";
+import UNDIP from "../../assets/img/logo-undip.png";
+import PEMDAJEPARA from "../../assets/img/pemda-jepara.png";
+import BALAIBESAR from "../../assets/img/balai-besar.png";
 import Testimoni from "../atoms/Testimoni";
 import ContactCard from "../atoms/SocialMediaCard";
 import SocialMediaCard from "../atoms/SocialMediaCard";
@@ -197,17 +200,23 @@ const AboutContainer = () => {
         desc={
           <>
             <p>
-              PT Arsadaya Samudra Nusantara Berdiri Sejak 2023, Saat ini telah
-              memiliki 3 Kluster Binaan:
+              Selamat datang di Arsadaya – mitra terpercaya Anda dalam
+              mendistribusikan berbagai produk makanan, minuman, dan kerajinan
+              tangan dari UMKM Indonesia yang berpotensi. Kami hadir untuk
+              menjembatani antara kreativitas para pengusaha kecil dengan pasar
+              yang lebih luas, membantu mereka tumbuh, dan memperkenalkan
+              produk-produk berkualitas asli Indonesia ke dunia.
             </p>
-            <div>
-              <ul className="list-disc list-inside">
-                <li>Kluster Nelayan - 59 Anggota</li>
-                <li>Kluster Rumput Laut - 74 Anggota</li>
-                <li>Kluster Pengolahan - 102 Anggota</li>
-              </ul>
-            </div>
-            <p>Yang Tersebar di 13 Desa di Kabupaten Jepara.</p>
+            <p>
+              perusahaan yang berfokus pada pengembangan pemberdayaan UMKM,
+              Arsadaya bekerja sama dengan lebih dari 85 mitra UMKM di seluruh
+              Indonesia. Kami percaya bahwa setiap produk memiliki cerita dan
+              potensi yang luar biasa, dan kami berkomitmen untuk mendukung
+              pengusaha lokal agar bisa bersaing di pasar yang lebih besar.
+              Melalui kolaborasi yang erat dengan mitra UMKM, kami membantu
+              mengolah, mengemas, dan mendistribusikan produk mereka ke berbagai
+              kalangan, baik di dalam negeri maupun internasional.
+            </p>
           </>
         }
         bgColor="bg-white"
@@ -272,19 +281,11 @@ const AboutContainer = () => {
           </svg>
           <h2 className="text-xl font-bold text-white">Partner</h2>
         </div>
-        <div className="flex gap-3 mt-2">
-          <PartnerCard
-            imageSrc={Astra}
-            altText="Astra Logo"
-            bgColor="bg-white"
-            link="https://www.astra.co.id/"
-          />
-          <PartnerCard
-            imageSrc={KBA}
-            altText="Kampung BerseriAstra Logo"
-            bgColor="bg-white"
-            link="https://www.satu-indonesia.com/kampungberseriastra/"
-          />
+        <div className="flex gap-3 mt-2 flex-wrap px-3 justify-center">
+          <PartnerCard imageSrc={KBA} bgColor="bg-white" />
+          <PartnerCard imageSrc={UNDIP} bgColor="bg-white" />
+          <PartnerCard imageSrc={PEMDAJEPARA} bgColor="bg-white" />
+          <PartnerCard imageSrc={BALAIBESAR} bgColor="bg-white" />
         </div>
       </div>
       <div className="flex flex-col py-5">

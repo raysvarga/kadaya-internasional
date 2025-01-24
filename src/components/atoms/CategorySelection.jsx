@@ -23,7 +23,7 @@ const CategorySelection = ({ category, selected }) => {
       <ModalProductCategory isVisible={isVisible} setState={setIsVisible} />
       <div className="px-2 mt-4">
         <h2 className={`font-semibold text-lg ${category ? null : "hidden"}`}>
-          Category
+          Kategori
         </h2>
         <div className="mt-3 flex justify-between">
           <div className="flex flex-col items-center w-fit">
