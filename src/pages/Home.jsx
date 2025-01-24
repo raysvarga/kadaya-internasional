@@ -12,65 +12,68 @@ const Home = () => {
   const {
     setDataToState,
     setFilteredProducts,
-    filteredProducts,
-    products,
+    filteredProducts = [],
+    products = [],
     setActiveCategory,
     searchQuery,
     setSearchQuery,
     setOtherSelected,
   } = useMainContext();
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6; // Jumlah produk per halaman
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     setActiveCategory("");
     setSearchQuery(null);
     setOtherSelected(false);
-    // sessionStorage.setItem("productData", JSON.stringify(productJson));
   }, []);
 
   useEffect(() => {
-    setActiveCategory("");
-    setSearchQuery(null);
-    // sessionStorage.setItem("newsData", JSON.stringify(newsJson));
-  }, []);
-
-  useEffect(() => {
-    // const savedData = sessionStorage.getItem("productData");
-    // const parsed = JSON.parse(savedData);
-    // const typeFiltered = parsed.filter((prod) => {
-    //   const matched = prod.type.toLowerCase().includes("rekomendasi");
-    //   return matched;
-    // });
-
     fetch(`/data/products.json`)
       .then((response) => response.json())
       .then((data) => {
         setDataToState(data);
-        const typeFiltered = data.filter((prod) => {
-          const matched = prod.type.toLowerCase().includes("rekomendasi");
-          return matched;
-        });
-        return typeFiltered;
+        const typeFiltered = data.filter((prod) => 
+          prod.type.toLowerCase().includes("rekomendasi")
+        );
+        setFilteredProducts(typeFiltered);
       })
-      .then((filterd) => {
-        setFilteredProducts(filterd);
-      })
-      .catch((error) =>
-        console.error("Error fetching statistics data:", error)
-      );
-
-    // if (savedData) {
-    //   setDataToState(parsed);
-    //   setFilteredProducts(typeFiltered);
-    // }
+      .catch((error) => console.error("Error fetching data:", error))
+      .finally(() => setLoading(false));
   }, []);
 
-  const filteredProductsSearch = products?.filter((product) => {
-    const matchesSearch = product.name
-      .toLowerCase()
-      .includes(searchQuery?.toLowerCase());
-    return matchesSearch;
-  });
+  // Logic untuk pagination
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentProducts = filteredProducts.slice(indexOfFirstItem, indexOfLastItem) || [];
+
+  // Fungsi untuk mengubah halaman
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  // Filter berdasarkan pencarian
+  const filteredProductsSearch = products?.filter((product) =>
+    product.name.toLowerCase().includes(searchQuery?.toLowerCase())
+  ) || [];
+
+  // Menghitung jumlah halaman berdasarkan jumlah total produk
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+
+  // Fungsi untuk pindah ke halaman berikutnya
+  const nextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  // Fungsi untuk pindah ke halaman sebelumnya
+  const prevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
 
   return (
     <>
@@ -85,15 +88,67 @@ const Home = () => {
               <CategorySelection category />
               <ProductTypeSelection />
               <div className="mt-5">
-                <ProductContainer showCategory productData={filteredProducts} />
+                {loading ? (
+                  <p className="text-center text-gray-500">Loading products...</p>
+                ) : (
+                  <>
+                    <ProductContainer showCategory productData={currentProducts} />
+                    {filteredProducts.length > 6 && ( // Hanya tampilkan pagination jika ada lebih dari 6 item
+                      <div className="flex justify-center mt-4">
+                        <button
+                          className="px-4 py-2 bg-blue-500 text-white rounded-l-lg"
+                          onClick={prevPage}
+                          disabled={currentPage === 1}
+                        >
+                          Prev
+                        </button>
+                        <span className="px-4 py-2">
+                          {currentPage} of {totalPages}
+                        </span>
+                        <button
+                          className="px-4 py-2 bg-blue-500 text-white rounded-r-lg"
+                          onClick={nextPage}
+                          disabled={currentPage === totalPages}
+                        >
+                          Next
+                        </button>
+                      </div>
+                    )}
+                  </>
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
+
       {searchQuery && (
         <div className="mt-8">
-          <ProductContainer showCategory productData={filteredProductsSearch} />
+          <ProductContainer
+            showCategory
+            productData={filteredProductsSearch.slice(indexOfFirstItem, indexOfLastItem) || []}
+          />
+          {filteredProductsSearch.length > 6 && ( // Hanya tampilkan pagination jika ada lebih dari 6 item
+            <div className="flex justify-center mt-4">
+              <button
+                className="px-4 py-2 bg-blue-500 text-white rounded-l-lg"
+                onClick={prevPage}
+                disabled={currentPage === 1}
+              >
+                Prev
+              </button>
+              <span className="px-4 py-2">
+                {currentPage} of {Math.ceil(filteredProductsSearch.length / itemsPerPage)}
+              </span>
+              <button
+                className="px-4 py-2 bg-blue-500 text-white rounded-r-lg"
+                onClick={nextPage}
+                disabled={currentPage === Math.ceil(filteredProductsSearch.length / itemsPerPage)}
+              >
+                Next
+              </button>
+            </div>
+          )}
         </div>
       )}
     </>

@@ -68,12 +68,12 @@ const ModalProductCategory = ({ isVisible, setState }) => {
         <div className="flex flex-col items-center w-fit">
           <button
             onClick={() => {
-              navigate("/find/kriya");
+              navigate("/find/craft");
               setOtherSelected(true);
               setState(false);
             }}
             className={`w-12 h-12 ${
-              activeCategory === "Kriya" ? "bg-red-600" : "bg-[#0795ff]"
+              activeCategory === "Craft" ? "bg-red-600" : "bg-[#0795ff]"
             } rounded-full grid place-content-center`}
           >
             <svg
@@ -93,7 +93,7 @@ const ModalProductCategory = ({ isVisible, setState }) => {
               <path d="M462.66 350.048c-9.096-16.131-22.641-28.941-37.162-35.146-4.229-1.807-10.743-3.961-17.753-3.961-5.244 0-10.013 1.191-14.18 3.54-11.607 6.546-15.107 20.067-16.16 27.545-2.201 15.636 1.754 33.853 10.85 49.983 9.096 16.131 22.641 28.94 37.16 35.145 4.23 1.807 10.745 3.961 17.754 3.961 5.244 0 10.012-1.191 14.178-3.539 11.608-6.547 15.108-20.069 16.162-27.548 2.204-15.633-1.751-33.851-10.849-49.98zm-5.268 47.71c-.511 3.627-2.317 12.412-8.039 15.64-1.695.956-3.775 1.44-6.182 1.44-3.321 0-7.356-.941-11.36-2.652-11.295-4.826-22.003-15.096-29.378-28.174-7.375-13.076-10.622-27.553-8.911-39.717.511-3.626 2.317-12.411 8.039-15.639 1.696-.956 3.776-1.44 6.183-1.44 3.322 0 7.356.941 11.359 2.651 11.297 4.828 22.005 15.097 29.379 28.174 7.377 13.079 10.623 27.555 8.91 39.717z" />
             </svg>
           </button>
-          <p className="text-xs mt-2 text-center">Kriya</p>
+          <p className="text-xs mt-2 text-center">Craft</p>
         </div>
         <div className="flex flex-col items-center w-fit">
           <button

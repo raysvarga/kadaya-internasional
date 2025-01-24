@@ -8,7 +8,7 @@
     "img": "orek-tempong.JPG",
     "desc": "",
     "category": "Produk Olahan",
-    "type": "Produk Unggulan",
+    "type": "",
     "price": 25000
   },
   {
@@ -104,7 +104,7 @@
     "img": "lemon.JPG",
     "desc": "",
     "category": "Produk Olahan",
-    "type": "Rekomendasi",
+    "type": "",
     "price": 30000
   },
   {
@@ -116,7 +116,7 @@
     "img": "dheluqi-kerupuk ikan.JPG",
     "desc": "",
     "category": "Produk Olahan",
-    "type": "Produk Unggulan",
+    "type": "",
     "price": 0
   },
   {
@@ -128,7 +128,7 @@
     "img": "dheluqi-abon tuna.JPG",
     "desc": "",
     "category": "Produk Olahan",
-    "type": "Produk Unggulan",
+    "type": "",
     "price": 0
   },
   {
@@ -140,7 +140,7 @@
     "img": "dheluqi-sambal seafood.JPG",
     "desc": "",
     "category": "Produk Olahan",
-    "type": "Produk Unggulan",
+    "type": "",
     "price": 0
   },
   {
@@ -394,5 +394,209 @@
     "category": "Produk Olahan",
     "type": "",
     "price": 0
+  },
+  {
+    "id": 34,
+    "name": "Cumi (Loligo chinensis)",
+    "team": "KUB Enggal Rejo",
+    "unit": "Desa Mulyoharjo",
+    "cert": [""],
+    "img": "cumi.jpg",
+    "desc": "",
+    "category": "Ikan Segar",
+    "type": "Produk Unggulan",
+    "price": "36.700/Kg"
+  },
+  {
+    "id": 35,
+    "name": "Rajungan (Portunus pelagicus)",
+    "team": "KUB Enggal Rejo",
+    "unit": "Desa Mulyoharjo",
+    "cert": [""],
+    "img": "rajungan.jpg",
+    "desc": "",
+    "category": "Ikan Segar",
+    "type": "",
+    "price": "65.500/Kg"
+  },
+  {
+    "id": 36,
+    "name": "Udang Putih (Metapenaeus eboracensis)",
+    "team": "KUB Enggal Rejo",
+    "unit": "Desa Mulyoharjo",
+    "cert": [""],
+    "img": "udang-putih.jpg",
+    "desc": "",
+    "category": "Ikan Segar",
+    "type": "",
+    "price": "39.000/Kg"
+  },
+  {
+    "id": 37,
+    "name": "Teri Nasi (Encrasicholina devisi)",
+    "team": "KUB PAS Jaya",
+    "unit": "Desa Ujungbatu",
+    "cert": [""],
+    "img": "teri-nasi.jpg",
+    "desc": "",
+    "category": "Ikan Segar",
+    "type": "Produk Unggulan",
+    "price": "45.000/Kg"
+  },
+  {
+    "id": 38,
+    "name": "Ikan Kembung (Rastrelliger faughni)",
+    "team": "KUB PAS Jaya",
+    "unit": "Desa Ujungbatu",
+    "cert": [""],
+    "img": "ikan-kembung.png",
+    "desc": "",
+    "category": "Ikan Segar",
+    "type": "",
+    "price": "17.200/Kg"
+  },
+  {
+    "id": 39,
+    "name": "Layur (Trichiurus lepturus)",
+    "team": "KUB Madalliong Karya",
+    "unit": "Desa Ujungbatu",
+    "cert": [""],
+    "img": "layur.JPG",
+    "desc": "",
+    "category": "Ikan Segar",
+    "type": "",
+    "price": "21.519/Kg"
+  },
+  {
+    "id": 40,
+    "name": "Udang Vaname (Penaeus vannamei)",
+    "team": "KUB Teluk Awur",
+    "unit": "Desa Teluk Awur",
+    "cert": [""],
+    "img": "udang-vaname.png",
+    "desc": "",
+    "category": "Ikan Segar",
+    "type": "Produk Unggulan",
+    "price": "240.000/Kg"
+  },
+  {
+    "id": 41,
+    "name": "Cumi Cabe Hijau",
+    "team": "Astarasa",
+    "unit": "Koperasi Bersama",
+    "cert": [""],
+    "img": "cumi-cabe-hijau.jpg",
+    "desc": "",
+    "category": "Produk Olahan",
+    "type": "Produk Unggulan",
+    "price": "55.000/Kg"
+  },
+  {
+    "id": 42,
+    "name": "Cumi Bumbu Hitam",
+    "team": "Astarasa",
+    "unit": "Koperasi Bersama",
+    "cert": [""],
+    "img": "cumi-bumbu-hitam.jpg",
+    "desc": "",
+    "category": "Produk Olahan",
+    "type": "Produk Unggulan",
+    "price": "55.000/Kg"
+  },
+  {
+    "id": 43,
+    "name": "Sate Cumi",
+    "team": "Astarasa",
+    "unit": "Koperasi Bersama",
+    "cert": [""],
+    "img": "sate-cumi.jpg",
+    "desc": "",
+    "category": "Produk Olahan",
+    "type": "Produk Unggulan",
+    "price": "45.500/Kg"
+  },
+  {
+    "id": 44,
+    "name": "Produk Kayu",
+    "team": "Wood Mood",
+    "unit": "Desa Mulyoharjo",
+    "cert": ["Food Grade"],
+    "img": "wood-mood.jpg",
+    "desc": "",
+    "category": "Craft",
+    "type": "Produk Unggulan",
+    "price": "15.000"
+  },
+  {
+    "id": 45,
+    "name": "Produk Kayu",
+    "team": "Kayu Kaya",
+    "unit": "Desa Tahunan",
+    "cert": ["Food Grade"],
+    "img": "kayu-kaya.png",
+    "desc": "",
+    "category": "Craft",
+    "type": "Produk Unggulan",
+    "price": "15.000"
+  },
+  {
+    "id": 46,
+    "name": "Produk Fashion",
+    "team": "Tenun Ikats",
+    "unit": "Desa Troso",
+    "cert": [""],
+    "img": "tenun-ikats.JPG",
+    "desc": "",
+    "category": "Craft",
+    "type": "Produk Unggulan",
+    "price": "10.000"
+  },
+  {
+    "id": 47,
+    "name": "Produk Fashion",
+    "team": "Omah Petruk",
+    "unit": "Desa Troso",
+    "cert": [""],
+    "img": "omah-petruk.JPG",
+    "desc": "",
+    "category": "Craft",
+    "type": "",
+    "price": "10.000"
+  },
+  {
+    "id": 48,
+    "name": "Produk Fashion",
+    "team": "Batik Kembang Mulyo",
+    "unit": "Desa Mulyoharjo",
+    "cert": [""],
+    "img": "",
+    "desc": "",
+    "category": "Craft",
+    "type": "",
+    "price": "10.000"
+  },
+  {
+    "id": 49,
+    "name": "Pinasti Special Chrochet",
+    "team": "Jaya Samudra",
+    "unit": "Desa Bondo",
+    "cert": [""],
+    "img": "pinasti-special.JPG",
+    "desc": "",
+    "category": "Craft",
+    "type": "",
+    "price": "20.000"
+  },
+  {
+    "id": 50,
+    "name": "Naura’s Craft",
+    "team": "Sidodadi",
+    "unit": "Desa Bondo",
+    "cert": [""],
+    "img": "naura-craft.JPG",
+    "desc": "",
+    "category": "Craft",
+    "type": "",
+    "price": "20.000"
   }
 ]

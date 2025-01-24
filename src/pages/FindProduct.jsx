@@ -39,9 +39,9 @@ const FindProduct = () => {
             categoryEdited = "Kopi";
             setActiveCategory("Kopi");
             break;
-          case "kriya":
-            categoryEdited = "Kriya";
-            setActiveCategory("Kriya");
+          case "craft":
+            categoryEdited = "Craft";
+            setActiveCategory("Craft");
             break;
           case "desa-wisata":
             categoryEdited = "Desa Wisata";
