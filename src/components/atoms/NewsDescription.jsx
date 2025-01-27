@@ -15,7 +15,7 @@ const NewsDescription = ({ data }) => {
         <h2 className="opacity-70 text-xs sm:text-sm">
           {data?.created_by || "Penulis tidak dikenal"}
         </h2>
-        <p className="text-justify text-[14px] sm:text-lg md:text-xl px-3 font-light italic leading-relaxed sm:text-justify">
+        <p className="text-justify text-[14px] sm:text-lg md:text-xl px-3 font-light leading-relaxed sm:text-justify">
           {data?.desc
             ? data.desc.split("\n\n").map((paragraph, index) => (
                 <span key={index}>
