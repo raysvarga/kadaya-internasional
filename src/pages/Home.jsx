@@ -36,7 +36,7 @@ const Home = () => {
       .then((response) => response.json())
       .then((data) => {
         setDataToState(data);
-        const typeFiltered = data.filter((prod) => 
+        const typeFiltered = data.filter((prod) =>
           prod.type.toLowerCase().includes("rekomendasi")
         );
         setFilteredProducts(typeFiltered);
@@ -48,15 +48,17 @@ const Home = () => {
   // Logic untuk pagination
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentProducts = filteredProducts.slice(indexOfFirstItem, indexOfLastItem) || [];
+  const currentProducts =
+    filteredProducts.slice(indexOfFirstItem, indexOfLastItem) || [];
 
   // Fungsi untuk mengubah halaman
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   // Filter berdasarkan pencarian
-  const filteredProductsSearch = products?.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery?.toLowerCase())
-  ) || [];
+  const filteredProductsSearch =
+    products?.filter((product) =>
+      product.name.toLowerCase().includes(searchQuery?.toLowerCase())
+    ) || [];
 
   // Menghitung jumlah halaman berdasarkan jumlah total produk
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
@@ -89,10 +91,15 @@ const Home = () => {
               <ProductTypeSelection />
               <div className="mt-5">
                 {loading ? (
-                  <p className="text-center text-gray-500">Loading products...</p>
+                  <p className="text-center text-gray-500">
+                    Loading products...
+                  </p>
                 ) : (
                   <>
-                    <ProductContainer showCategory productData={currentProducts} />
+                    <ProductContainer
+                      showCategory
+                      productData={currentProducts}
+                    />
                     {filteredProducts.length > 6 && ( // Hanya tampilkan pagination jika ada lebih dari 6 item
                       <div className="flex justify-center mt-4">
                         <button
@@ -126,7 +133,10 @@ const Home = () => {
         <div className="mt-8">
           <ProductContainer
             showCategory
-            productData={filteredProductsSearch.slice(indexOfFirstItem, indexOfLastItem) || []}
+            productData={
+              filteredProductsSearch.slice(indexOfFirstItem, indexOfLastItem) ||
+              []
+            }
           />
           {filteredProductsSearch.length > 6 && ( // Hanya tampilkan pagination jika ada lebih dari 6 item
             <div className="flex justify-center mt-4">
@@ -138,12 +148,16 @@ const Home = () => {
                 Prev
               </button>
               <span className="px-4 py-2">
-                {currentPage} of {Math.ceil(filteredProductsSearch.length / itemsPerPage)}
+                {currentPage} of{" "}
+                {Math.ceil(filteredProductsSearch.length / itemsPerPage)}
               </span>
               <button
                 className="px-4 py-2 bg-blue-500 text-white rounded-r-lg"
                 onClick={nextPage}
-                disabled={currentPage === Math.ceil(filteredProductsSearch.length / itemsPerPage)}
+                disabled={
+                  currentPage ===
+                  Math.ceil(filteredProductsSearch.length / itemsPerPage)
+                }
               >
                 Next
               </button>

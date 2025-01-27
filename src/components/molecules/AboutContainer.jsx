@@ -1,7 +1,6 @@
 import React from "react";
 import AboutCard from "../atoms/AboutCard";
 import PartnerCard from "../atoms/PartnerCard";
-import Astra from "../../assets/img/astra.png";
 import KBA from "../../assets/img/kampung-berseri-astra.jpg";
 import UNDIP from "../../assets/img/logo-undip.png";
 import PEMDAJEPARA from "../../assets/img/pemda-jepara.png";
@@ -199,23 +198,27 @@ const AboutContainer = () => {
         svg={AboutIcon}
         desc={
           <>
-            <p>
-              Selamat datang di Arsadaya – mitra terpercaya Anda dalam
-              mendistribusikan berbagai produk makanan, minuman, dan kerajinan
-              tangan dari UMKM Indonesia yang berpotensi. Kami hadir untuk
-              menjembatani antara kreativitas para pengusaha kecil dengan pasar
+            <p className="mb-4">
+              Arsadaya sebagai mitra terpercaya dalam mendistribusikan berbagai
+              produk makanan, minuman, dan kerajinan tangan dari UMKM yang
+              berpotensi.
+            </p>
+            <p className="mb-4">
+              Kami hadir untuk menjembatani kreativitas para UMKM dengan pasar
               yang lebih luas, membantu mereka tumbuh, dan memperkenalkan
               produk-produk berkualitas asli Indonesia ke dunia.
             </p>
-            <p>
-              perusahaan yang berfokus pada pengembangan pemberdayaan UMKM,
-              Arsadaya bekerja sama dengan lebih dari 85 mitra UMKM di seluruh
-              Indonesia. Kami percaya bahwa setiap produk memiliki cerita dan
-              potensi yang luar biasa, dan kami berkomitmen untuk mendukung
-              pengusaha lokal agar bisa bersaing di pasar yang lebih besar.
-              Melalui kolaborasi yang erat dengan mitra UMKM, kami membantu
-              mengolah, mengemas, dan mendistribusikan produk mereka ke berbagai
-              kalangan, baik di dalam negeri maupun internasional.
+            <p className="mb-4">
+              Arsayadaya berfokus pada pengembangan pemberdayaan UMKM, dan lebih
+              dari 85 mitra UMKM menjadi bagian dari Arsadaya.
+            </p>
+            <p className="">
+              Kami percaya bahwa setiap produk memiliki cerita dan potensi yang
+              luar biasa, dan kami berkomitmen untuk mendukung pengusaha lokal
+              agar bisa bersaing di pasar yang lebih besar. Melalui kolaborasi
+              yang erat dengan UMKM, kami membantu mengolah, mengemas, dan
+              mendistribusikan produk mereka ke berbagai kalangan didalam negeri
+              maupun internasional.
             </p>
           </>
         }
@@ -225,7 +228,16 @@ const AboutContainer = () => {
       <AboutCard
         title="Visi"
         svg={VisiIcon}
-        desc="Menjadi Perusahaan Yang Menciptakan Ekosistem UMKM Melalui Akselerasi dan Distribusi yang Berkelanjutan."
+        desc={
+          <>
+            <div>
+              <p>
+                Menjadi Perusahaan Yang Menciptakan Ekosistem UMKM Melalui
+                Akselerasi dan Distribusi yang Berkelanjutan.
+              </p>
+            </div>
+          </>
+        }
         bgColor="bg-[#0795ff]"
         fontColor="text-white"
       />
@@ -234,20 +246,29 @@ const AboutContainer = () => {
         svg={MisiIcon}
         desc={
           <>
-            <ul className="list-disc list-inside">
-              <li>
-                Memberikan pelatihan dan pendampingan berkelanjutan kepada
-                pelaku UMKM
-              </li>
-              <li>
-                Mengoptimalkan penggunaan teknologi untuk mendukung akselerasi
-                dan distribusi UMKM
-              </li>
-              <li>
-                Membangun jaringan distribusi yang efisien untuk meningkatkan
-                akses pasar UMKM
-              </li>
-            </ul>
+            <div>
+              <div className="flex gap-3">
+                <span>&bull;</span>
+                <p>
+                  Memberikan pelatihan dan pendampingan berkelanjutan kepada
+                  pelaku UMKM
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span>&bull;</span>
+                <p>
+                  Mengoptimalkan penggunaan teknologi untuk mendukung akselerasi
+                  dan distribusi UMKM
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span>&bull;</span>
+                <p>
+                  Membangun jaringan distribusi yang efisien untuk meningkatkan
+                  akses pasar UMKM
+                </p>
+              </div>
+            </div>
           </>
         }
         bgColor="bg-white"

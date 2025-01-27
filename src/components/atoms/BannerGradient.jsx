@@ -11,7 +11,7 @@ const BannerGradient = () => {
         </p>
       </div>
       <div>
-        <img src={arsadaya} alt="" className="w-28 mr-3"/>
+        <img src={arsadaya} alt="" className="w-32 mr-6" />
       </div>
     </div>
   );
