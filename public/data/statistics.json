@@ -9,15 +9,15 @@
   ],
   "data2023": [
     ["Month", "Value", { "role": "style" }],
-    ["Januari", 8.94, "#f2981b"],
-    ["Agustus", 10.49, "#f2981b"],
+    ["Oktober", 8.94, "#f2981b"],
+    ["November", 10.49, "#f2981b"],
     ["Desember", 19.3, "#f2981b"]
   ],
   "data2024": [
     ["Month", "Value", { "role": "style" }],
-    ["Januari", 8.94, "#2e8799"],
-    ["Agustus", 10.49, "#2e8799"],
-    ["Desember", 19.3, "#2e8799"]
+    ["November", 8.94, "#2e8799"],
+    ["Desember", 10.49, "#2e8799"],
+    ["Januari", 19.3, "#2e8799"]
   ],
   "progressBars": [
     { "completed": 80, "baseBgColor": "#ffc1c1", "bgColor": "#f05556" },

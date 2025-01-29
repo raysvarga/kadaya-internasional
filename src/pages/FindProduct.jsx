@@ -23,17 +23,17 @@ const FindProduct = () => {
         let categoryEdited = "";
 
         switch (cat) {
-          case "ikan-segar":
-            categoryEdited = "Ikan Segar";
-            setActiveCategory("Ikan Segar");
+          case "gula-aren":
+            categoryEdited = "Gula Aren";
+            setActiveCategory("Gula Aren");
             break;
-          case "produk-olahan":
-            categoryEdited = "Produk Olahan";
-            setActiveCategory("Produk Olahan");
+          case "produk-camilan":
+            categoryEdited = "Produk Camilan";
+            setActiveCategory("Produk Camilan");
             break;
-          case "rumput-laut":
-            categoryEdited = "Rumput Laut";
-            setActiveCategory("Rumput Laut");
+          case "produk-rempah":
+            categoryEdited = "Produk Rempah";
+            setActiveCategory("Produk Rempah");
             break;
           case "kopi":
             categoryEdited = "Kopi";

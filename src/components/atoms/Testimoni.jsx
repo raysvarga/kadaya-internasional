@@ -25,7 +25,7 @@ const Testimoni = () => {
     return (
       <button
         onClick={onClick}
-        className="absolute left-0 ml-2 top-1/2 transform -translate-y-1/2 bg-[#0795ff] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300"
+        className="absolute left-0 ml-2 top-1/2 transform -translate-y-1/2 bg-[#276b1e] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ const Testimoni = () => {
     return (
       <button
         onClick={onClick}
-        className="absolute right-0 mr-2 top-1/2 transform -translate-y-1/2 bg-[#0795ff] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300"
+        className="absolute right-0 mr-2 top-1/2 transform -translate-y-1/2 bg-[#276b1e] text-white p-2 rounded-full w-8 h-8 flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -99,8 +99,8 @@ const Testimoni = () => {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlSpace="preserve"
-                    fill="#0795ff"
-                    stroke="#0795ff"
+                    fill="#276b1e"
+                    stroke="#276b1e"
                     strokeWidth={0.001}
                     viewBox="0 0 52 52"
                     width="20"
@@ -114,8 +114,8 @@ const Testimoni = () => {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlSpace="preserve"
-                    fill="#0795ff"
-                    stroke="#0795ff"
+                    fill="#276b1e"
+                    stroke="#276b1e"
                     strokeWidth={0.001}
                     transform="rotate(180)"
                     viewBox="0 0 52 52"
@@ -142,7 +142,7 @@ const Testimoni = () => {
                     height={33.6}
                     x={-4.8}
                     y={-4.8}
-                    fill="#0795ff"
+                    fill="#276b1e"
                     stroke="none"
                     rx={16.8}
                   />
@@ -155,7 +155,7 @@ const Testimoni = () => {
                     <path d="M6.75 6.5a5.25 5.25 0 1 1 10.5 0 5.25 5.25 0 0 1-10.5 0ZM4.25 18.571a5.321 5.321 0 0 1 5.321-5.321h4.858a5.321 5.321 0 0 1 5.321 5.321 4.179 4.179 0 0 1-4.179 4.179H8.43a4.179 4.179 0 0 1-4.179-4.179Z" />
                   </g>
                 </svg>
-                <h5 className="text-[#0795ff] mt-2 font-semibold pt-9">
+                <h5 className="text-[#276b1e] mt-2 font-semibold pt-9">
                   {testimonial.name}
                 </h5>
                 <p className="opacity-80 text-sm">{testimonial.role}</p>

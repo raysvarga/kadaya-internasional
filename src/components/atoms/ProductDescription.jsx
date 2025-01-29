@@ -4,7 +4,7 @@ const ProductDescription = ({ data }) => {
   return (
     <div className="h-[400px] mt-4">
       <div
-        className={`bg-[#0795ff] ${data?.name.length > 20 ? "h-24" : "h-20"}`}
+        className={`bg-[#276b1e] ${data?.name.length > 20 ? "h-24" : "h-20"}`}
       >
         <div className="flex items-center pt-3 px-4 text-white ">
           <h3

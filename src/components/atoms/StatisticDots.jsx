@@ -5,7 +5,7 @@ const StatisticDots = ({ data }) => {
 
   return (
     <div>
-      <div className="bg-[#231f20] rounded-full mt-1 py-1 ps-1">
+      <div className="bg-[#276b1e] rounded-full mt-1 py-1 ps-1">
         <div className="flex gap-2 justify-center">
           {data.slice(1).map((item, index) => (
             <div key={index} className="flex gap-1 items-center">

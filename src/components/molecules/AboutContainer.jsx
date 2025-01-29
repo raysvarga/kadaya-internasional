@@ -1,10 +1,11 @@
 import React from "react";
 import AboutCard from "../atoms/AboutCard";
 import PartnerCard from "../atoms/PartnerCard";
-import KBA from "../../assets/img/kampung-berseri-astra.jpg";
+import DWL from "../../assets/img/dwl.jpg";
 import UNDIP from "../../assets/img/logo-undip.png";
-import PEMDAJEPARA from "../../assets/img/pemda-jepara.png";
-import BALAIBESAR from "../../assets/img/balai-besar.png";
+import PERTAMINA from "../../assets/img/pertamina.png";
+import BUMN from "../../assets/img/bumn.png";
+import PERTAMINAFOUNDATION from "../../assets/img/pertamina-foundation.png";
 import Testimoni from "../atoms/Testimoni";
 import ContactCard from "../atoms/SocialMediaCard";
 import SocialMediaCard from "../atoms/SocialMediaCard";
@@ -15,22 +16,14 @@ const AboutContainer = () => {
       xmlns="http://www.w3.org/2000/svg"
       width={64}
       height={64}
-      className="icon w-10"
-      viewBox="-204.8 -204.8 1433.6 1433.6"
+      viewBox="0 0 16 16"
+      className="w-10"
     >
-      <rect
-        width={1433.6}
-        height={1433.6}
-        x={-204.8}
-        y={-204.8}
-        strokeWidth={0}
-        rx={716.8}
-      />
       <path
-        fill="#fff"
-        d="M789.333 853.333H234.667l-128 128V256c0-70.4 57.6-128 128-128h554.666c70.4 0 128 57.6 128 128v469.333c0 70.4-57.6 128-128 128z"
+        fill="#276b1e"
+        fillRule="evenodd"
+        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM8 7a1 1 0 0 0-1 1v3a1 1 0 1 0 2 0V8a1 1 0 0 0-1-1Z"
       />
-      <path d="M469.333 426.667h85.334v234.666h-85.334zM469.33299999999997 320a42.667 42.667 0 1 0 85.334 0 42.667 42.667 0 1 0-85.334 0Z" />
     </svg>
   );
   const VisiIcon = (
@@ -38,8 +31,8 @@ const AboutContainer = () => {
       xmlns="http://www.w3.org/2000/svg"
       width={64}
       height={64}
-      fill="#0795ff"
-      stroke="#0795ff"
+      fill="#276b1e"
+      stroke="#276b1e"
       strokeWidth={0}
       viewBox="-3.2 -3.2 22.4 22.4"
       className="w-10"
@@ -67,8 +60,8 @@ const AboutContainer = () => {
       id="_x32_"
       width={64}
       height={64}
-      fill="#000"
-      stroke="#000"
+      fill="#276b1e"
+      stroke="#276b1e"
       viewBox="-153.6 -153.6 819.2 819.2"
       className="w-10"
     >
@@ -78,7 +71,7 @@ const AboutContainer = () => {
         height={819.2}
         x={-153.6}
         y={-153.6}
-        fill="#000000"
+        fill="#276b1e"
         strokeWidth={0}
         rx={409.6}
       />
@@ -109,7 +102,7 @@ const AboutContainer = () => {
         strokeWidth={0}
         rx={16.8}
       />
-      <g fill="#0795ff">
+      <g fill="#276b1e">
         <path
           fillRule="evenodd"
           d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
@@ -129,7 +122,7 @@ const AboutContainer = () => {
       xmlns="http://www.w3.org/2000/svg"
       width={64}
       height={64}
-      fill="#0795ff"
+      fill="#276b1e"
       viewBox="-6.4 -6.4 44.8 44.8"
       className="w-10"
     >
@@ -151,7 +144,7 @@ const AboutContainer = () => {
       xmlns="http://www.w3.org/2000/svg"
       width={64}
       height={64}
-      fill="#0795ff"
+      fill="#276b1e"
       viewBox="-6.4 -6.4 44.8 44.8"
       className="w-10"
     >
@@ -174,7 +167,7 @@ const AboutContainer = () => {
       xmlSpace="preserve"
       width={64}
       height={64}
-      fill="#0795ff"
+      fill="#276b1e"
       viewBox="-102.4 -102.4 716.8 716.8"
       className="w-10"
     >
@@ -194,36 +187,37 @@ const AboutContainer = () => {
   return (
     <div className="pb-20">
       <AboutCard
-        title="Tentang Arsadaya"
+        title="Tentang Kadaya"
         svg={AboutIcon}
         desc={
           <>
             <p className="mb-4">
-              Arsadaya sebagai mitra terpercaya dalam mendistribusikan berbagai
-              produk makanan, minuman, dan kerajinan tangan dari UMKM yang
-              berpotensi.
+              Kadaya merupakan inisiatif pemberdayaan ekonomi berbasis komunitas
+              yang berfokus pada pengembangan usaha mikro dan sosial, terutama
+              bagi perempuan dan komunitas lokal. Dengan pendekatan kolaboratif,
+              Kadaya membantu meningkatkan kapasitas bisnis, pemasaran, serta
+              memperluas akses pasar, sehingga pelaku usaha dapat lebih mandiri
+              dan berdaya saing.
             </p>
             <p className="mb-4">
-              Kami hadir untuk menjembatani kreativitas para UMKM dengan pasar
-              yang lebih luas, membantu mereka tumbuh, dan memperkenalkan
-              produk-produk berkualitas asli Indonesia ke dunia.
+              Lebih dari sekadar mendukung pertumbuhan ekonomi, Kadaya hadir
+              sebagai penggerak perubahan dalam kesetaraan gender. Melalui
+              pelatihan, pendampingan, dan inovasi produk, kami berupaya
+              memperkuat peran perempuan dalam kewirausahaan, membuka peluang
+              yang lebih luas, serta menciptakan ekosistem bisnis yang
+              berkelanjutan dan inklusif.
             </p>
-            <p className="mb-4">
-              Arsayadaya berfokus pada pengembangan pemberdayaan UMKM, dan lebih
-              dari 85 mitra UMKM menjadi bagian dari Arsadaya.
-            </p>
-            <p className="">
-              Kami percaya bahwa setiap produk memiliki cerita dan potensi yang
-              luar biasa, dan kami berkomitmen untuk mendukung pengusaha lokal
-              agar bisa bersaing di pasar yang lebih besar. Melalui kolaborasi
-              yang erat dengan UMKM, kami membantu mengolah, mengemas, dan
-              mendistribusikan produk mereka ke berbagai kalangan didalam negeri
-              maupun internasional.
+            <p>
+              Kami percaya bahwa setiap produk memiliki cerita dan potensi besar
+              untuk berkembang. Dengan komitmen kuat dalam mendukung pengusaha
+              lokal, Kadaya terus membangun jembatan bagi UMKM agar dapat
+              bersaing di pasar yang lebih luas, baik di tingkat nasional maupun
+              internasional.
             </p>
           </>
         }
         bgColor="bg-white"
-        fontColor="text-black"
+        fontColor="text-[#276b1e]"
       />
       <AboutCard
         title="Visi"
@@ -232,13 +226,15 @@ const AboutContainer = () => {
           <>
             <div>
               <p>
-                Menjadi Perusahaan Yang Menciptakan Ekosistem UMKM Melalui
-                Akselerasi dan Distribusi yang Berkelanjutan.
+                Mewujudkan ekosistem dalam pemberdayaan ekonomi berbasis
+                komunitas yang inklusif, berkelanjutan, dan berdaya saing,
+                dengan menempatkan perempuan sebagai penggerak utama dalam
+                pembangunan sosial dan ekonomi.
               </p>
             </div>
           </>
         }
-        bgColor="bg-[#0795ff]"
+        bgColor="bg-[#276b1e]"
         fontColor="text-white"
       />
       <AboutCard
@@ -250,31 +246,33 @@ const AboutContainer = () => {
               <div className="flex gap-3">
                 <span>&bull;</span>
                 <p>
-                  Memberikan pelatihan dan pendampingan berkelanjutan kepada
-                  pelaku UMKM
+                  Meningkatkan Kapasitas UMKM dari pelatihan, pendampingan, dan
+                  akses sumber daya untuk mendorong kemandirian usaha.
                 </p>
               </div>
               <div className="flex gap-3">
                 <span>&bull;</span>
                 <p>
-                  Mengoptimalkan penggunaan teknologi untuk mendukung akselerasi
-                  dan distribusi UMKM
+                  Memperluas Akses Pasar dengan membangun jaringan distribusi
+                  dan pemasaran yang lebih luas, baik di tingkat nasional maupun
+                  internasional.
                 </p>
               </div>
               <div className="flex gap-3">
                 <span>&bull;</span>
                 <p>
-                  Membangun jaringan distribusi yang efisien untuk meningkatkan
-                  akses pasar UMKM
+                  Mendorong Kesetaraan Gender dalam kewirausahaan dengan
+                  memperkuat peran perempuan sebagai pelaku ekonomi yang berdaya
+                  dan mandiri.
                 </p>
               </div>
             </div>
           </>
         }
         bgColor="bg-white"
-        fontColor="text-black"
+        fontColor="text-[#276b1e]"
       />
-      <div className="flex flex-col items-center bg-[#0795ff] py-5">
+      <div className="flex flex-col items-center bg-[#276b1e] py-5">
         <div className="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -296,17 +294,18 @@ const AboutContainer = () => {
             <path
               d="M495.622 113.089v150.03s-32.11 6.326-38.725 7.158c-6.594.83-27.316 7.521-42.334-6.914-23.16-22.197-105.447-104.03-105.447-104.03s-14.188-13.922-36.969-1.89c-20.912 11.022-51.911 27.175-64.859 33.465-24.477 13.028-44.764-7.642-44.764-23.387 0-12.213 7.621-20.502 18.515-26.598 29.524-17.898 91.752-52.827 117.67-66.598 15.754-8.379 27.105-9.097 48.734 9.124 26.638 22.403 50.344 42.824 50.344 42.824s7.732 6.453 20.063 3.854c30.28-6.402 77.772-17.038 77.772-17.038zM168.098 367.3c3.985-10.238 2.653-21.689-4.987-29.545-6.865-7.027-16.888-8.879-26.445-6.689 2.673-9.479 1.197-19.568-5.705-26.688-6.886-7.009-16.89-8.898-26.446-6.688 2.653-9.465 1.181-19.553-5.725-26.652-10.814-11.092-29.519-10.616-41.807 1.097-12.223 11.729-20.053 32.979-9.144 45.487 10.891 12.445 23.405 4.873 32.945 2.699-2.654 9.465-10.606 18.269-.813 30.658 9.784 12.395 23.404 4.875 32.954 2.721-2.663 9.429-10.268 19.117-.851 30.604 9.502 11.522 25.065 5.383 35.344 2.19-3.967 10.199-12.458 21.193-1.549 33.513 10.892 12.409 36.063 6.668 48.358-5.063 12.262-11.729 13.439-30.318 2.654-41.445-7.446-7.634-18.546-9.41-28.783-6.199zm224.344-78.054c-88.88-88.881-47.075-47.058-94.906-94.992 0 0-14.375-14.311-33.321-5.998-13.3 5.828-30.423 13.771-43.307 19.835-14.158 7.424-24.347 9.722-29.131 9.69-27.37-.179-49.576-22.178-49.576-49.521 0-17.738 9.417-33.181 23.462-41.947 19.75-13.667 65.21-37.847 65.21-37.847s-13.849-17.549-44.187-17.549c-30.329 0-93.695 41.512-93.695 41.512s-17.976 11.514-43.601 1.143L0 96.373V268.05s14.103 4.082 26.775 9.258c2.862-8.162 7.48-15.699 13.886-21.924 21.023-20.024 55.869-20.232 74.996-.537 5.762 5.987 9.783 13.129 11.835 21.024 7.707 2.379 14.688 6.593 20.298 12.373a47.226 47.226 0 0 1 11.854 20.984c7.698 2.381 14.669 6.611 20.298 12.395 6.339 6.537 10.562 14.433 12.534 22.988a48.588 48.588 0 0 1 21.176 12.693c11.495 11.807 15.575 27.826 13.103 43.278.02 0 .058 0 .076.035.188.246 7.122 7.976 11.446 12.336 8.474 8.482 22.311 8.482 30.811 0 8.444-8.479 8.481-22.289 0-30.811-.304-.303-30.572-31.963-28.136-34.418 2.418-2.438 40.981 37.688 41.699 38.422 8.463 8.465 22.291 8.465 30.792 0 8.481-8.479 8.463-22.289 0-30.791-.416-.396-2.152-2.059-2.796-2.721 0 0-38.234-34.06-35.324-36.97 2.946-2.928 50.438 41.392 50.515 41.392 8.537 7.688 21.687 7.631 29.9-.586 7.991-7.99 8.162-20.629 1.078-29.146-.15-.453-36.194-38.121-33.381-40.955 2.854-2.871 38.519 33.853 38.594 33.929 8.444 8.463 22.291 8.463 30.792 0 8.463-8.464 8.463-22.291 0-30.83-.115-.072-.266-.148-.379-.222z"
               style={{
-                fill: "#0795ff",
+                fill: "#276b1e",
               }}
             />
           </svg>
           <h2 className="text-xl font-bold text-white">Partner</h2>
         </div>
         <div className="flex gap-3 mt-2 flex-wrap px-3 justify-center">
-          <PartnerCard imageSrc={KBA} bgColor="bg-white" />
           <PartnerCard imageSrc={UNDIP} bgColor="bg-white" />
-          <PartnerCard imageSrc={PEMDAJEPARA} bgColor="bg-white" />
-          <PartnerCard imageSrc={BALAIBESAR} bgColor="bg-white" />
+          <PartnerCard imageSrc={BUMN} bgColor="bg-white" />
+          <PartnerCard imageSrc={PERTAMINA} bgColor="bg-white" />
+          <PartnerCard imageSrc={PERTAMINAFOUNDATION} bgColor="bg-white" />
+          <PartnerCard imageSrc={DWL} bgColor="bg-white" />
         </div>
       </div>
       <div className="flex flex-col py-5">
@@ -326,7 +325,7 @@ const AboutContainer = () => {
               height={28}
               x={-4}
               y={-4}
-              fill="#000"
+              fill="#276b1e"
               stroke="none"
               rx={14}
             />
@@ -336,7 +335,7 @@ const AboutContainer = () => {
               d="M4 3h12c.55 0 1.02.2 1.41.59S18 4.45 18 5v7c0 .55-.2 1.02-.59 1.41S16.55 14 16 14h-1l-5 5v-5H4c-.55 0-1.02-.2-1.41-.59S2 12.55 2 12V5c0-.55.2-1.02.59-1.41S3.45 3 4 3zm11 2H4v1h11V5zm1 3H4v1h12V8zm-3 3H4v1h9v-1z"
             />
           </svg>
-          <h2 className="text-xl font-bold">Testimoni</h2>
+          <h2 className="text-xl font-bold text-[#276b1e]">Testimoni</h2>
         </div>
         <div>
           <Testimoni />
@@ -345,14 +344,14 @@ const AboutContainer = () => {
       <div>
         <ContactCard />
       </div>
-      <div className="bg-[#0795ff] py-3">
+      <div className="bg-[#276b1e] py-3">
         <div className="flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={64}
             height={64}
-            fill="#0795ff"
-            stroke="#0795ff"
+            fill="#276b1e"
+            stroke="#276b1e"
             strokeWidth={0}
             viewBox="-4.8 -4.8 33.6 33.6"
             className="w-10 mr-2"
@@ -376,14 +375,14 @@ const AboutContainer = () => {
         <div>
           <div className="flex justify-center">
             <p className="text-base mt-2 text-white text-center">
-              Alamat: MSTP Kampus UNDIP Jepara, Jalan UNDIP, Telukawur, Kec.
-              Tahunan, Kabupaten Jepara, Jawa Tengah 59427
+              Alamat: Indrakila, Lerep, Kec. Ungaran Bar, Kabupaten Semarang,
+              Jawa Tengah
             </p>
           </div>
           <div className="flex justify-center mt-4 px-3">
             <iframe
               style={{ border: 0, width: "100%", height: "200px" }}
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.023547922144!2d110.6391087!3d-6.6218739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e711e6aa6f4aac5%3A0x27acfb8fefa2dc43!2sMarine%20Science%20Techno%20Park%20UNDIP!5e0!3m2!1sen!2sid!4v1633406511176!5m2!1sen!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.8687212485215!2d110.37218550000001!3d-7.1411758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70870065c30955%3A0x162dcb6f8df1dc0!2sSekretariat%20KWT%20Manggar%20Lestari!5e0!3m2!1sid!2sid!4v1738164595538!5m2!1sid!2sid"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -392,16 +391,16 @@ const AboutContainer = () => {
         </div>
         <div className="flex justify-center gap-5">
           <SocialMediaCard
-            link="https://www.instagram.com/dsa_arrumsamudra?igsh=eGVlcDA0NXdmd2kx"
+            link="https://www.instagram.com/kadaya.id/"
             svg={Instagram}
           />
-          <SocialMediaCard link="https://wa.me/6281575249021" svg={Whatsapp} />
+          <SocialMediaCard link="https://wa.me/6288216471424" svg={Whatsapp} />
           <SocialMediaCard
-            link="https://www.tiktok.com/@arrumsamudranusantara?_t=8qCLXG5lkeK&_r=1"
+            link="https://www.tiktok.com/@kadaya.id?is_from_webapp=1&sender_device=pc"
             svg={TikTok}
           />
           <SocialMediaCard
-            link="https://mail.google.com/mail/?view=cm&fs=1&to=ptarrumsamudranusantara@gmail.com"
+            link="https://mail.google.com/mail/?view=cm&fs=1&to=kwtindrokilo@gmail.com"
             svg={Email}
           />
         </div>

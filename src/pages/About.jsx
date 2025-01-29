@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/atoms/Navbar";
 import Header from "../components/molecules/Header";
-import AboutPict from "../assets/img/about.jpg";
+import AboutPict from "../assets/img/about-sampul.jpg";
 import AboutContainer from "../components/molecules/AboutContainer";
 
 const About = () => {

@@ -49,12 +49,12 @@ const Statistics = () => {
       <div className="mt-5 mx-5">
         <div>
           <h2 className="text-2xl font-bold leading-tight">
-            Arsadaya Samudra <br /> dalam Angka
+            Kadaya dalam Angka
           </h2>
           <p className="text-xs mt-1 w-72">
-            Menyajikan data dan statistik terkini mengenai berbagai program yang
-            telah dilakukan oleh Arsadaya Samudra. Dari peningkatan
-            kesejahteraan masyarakat hingga distribusi produk perikanan.
+            Menyajikan data dan statistic terkiri mengenai berbagai program yang
+            telah diakukan oleh Kadaya. Dari Peningkatan kesejahteraan petani
+            hingga distribusi produk pertanian dan perkebunan.
           </p>
         </div>
 
@@ -73,21 +73,21 @@ const Statistics = () => {
           <StatisticDots data={statistics.data} />
           <h4 className="font-medium mt-2">Masyarakat Terpapar Program</h4>
           <p className="text-xs mt-1">
-            Grafik ini menunjukkan persentase masyarakat yang telah terpapar
-            oleh berbagai program yang dilaksanakan oleh Arsadaya Samudra.
-            Menyediakan wawasan tentang jangkauan dan dampak program terhadap
-            komunitas lokal.
+            Grafik ini menunjukkan presentase masyarakat yang telah terpapar
+            oleh berbagai program yang dilaksanakan oleh Kadaya. Menyediakan
+            wawasan tentang jangkauan dan dampak program terhadap petani lokal.
           </p>
         </div>
 
         <div className="bg-white mt-3 rounded-xl p-4 shadow-sm">
           <StatisticPerson />
-          <div className="bg-[#231f20] text-white mt-3 px-3 py-1 pb-2 rounded-xl">
+          <div className="bg-[#276b1e] text-white mt-3 px-3 py-1 pb-2 rounded-xl">
             <h4 className="font-semibold">Kelompok Terbesar</h4>
             <p className="text-xs">
               Kelompok terbesar yang menerima manfaat dari program-program ini
-              mencakup berbagai demografi. Ini memberikan gambaran tentang
-              kelompok mana yang paling banyak terlibat dan terpengaruh.
+              baru saja mencakup satu demografi yaitu Desa Lerep. Ini memberikan
+              gambaran tentang kelompok mana yang paling banyak terlibat dan
+              terpengaruh.
             </p>
           </div>
         </div>
@@ -99,14 +99,14 @@ const Statistics = () => {
         >
           <div className="bg-white shadow-sm p-3 rounded-xl">
             <img src={triangle} alt="" className="w-28 mx-auto" />
-            <div className="bg-[#231f20] text-white mx-auto rounded-xl p-3 mt-3 w-fit">
+            <div className="bg-[#276b1e] text-white mx-auto rounded-xl p-3 mt-3 w-fit">
               <h4 className="font-semibold text-center leading-tight">
-                Kluster <br /> Perikanan
+                Kluster <br /> Perkebunan
               </h4>
               <p className="text-xs mt-[2px] text-center mx-auto">
-                Kluster perikanan merupakan salah satu fokus utama kami dalam
+                Kluster Perkebunan merupakan salah satu focus Utama kami dalam
                 meningkatkan taraf hidup masyarakat melalui program-program yang
-                berkelanjutan dan inovatif.
+                berkelanjutan dan inovatif
               </p>
             </div>
           </div>
@@ -122,14 +122,14 @@ const Statistics = () => {
                 />
               ))}
             </div>
-            <div className="bg-[#231f20] text-white mx-auto rounded-xl p-3 mt-3 w-fit">
+            <div className="bg-[#276b1e] text-white mx-auto rounded-xl p-3 mt-3 w-fit">
               <h4 className="font-semibold text-center leading-tight">
-                Kluster <br /> Perikanan
+                Gula Aren
               </h4>
               <p className="text-xs mt-[2px] text-center mx-auto">
-                Kluster perikanan adalah area fokus utama dalam usaha kami untuk
-                meningkatkan ekonomi lokal melalui pendekatan inovatif dan
-                berkelanjutan.
+                Gula Aren merupakan area fokus Utama dalam usaha kami untuk
+                meningkatkan ekonomi local mellaui pendekatan inovatif dan
+                berkelanjutan
               </p>
             </div>
           </div>
@@ -140,7 +140,7 @@ const Statistics = () => {
           data-aos-duration="2000"
           className="p-6 mt-3 bg-white rounded-xl shadow-sm"
         >
-          <p className="font-semibold">Data 2023</p>
+          <p className="font-semibold">Data 2024</p>
           <div>
             {statistics.data2023.length > 0 && (
               <Chart
@@ -152,7 +152,7 @@ const Statistics = () => {
               />
             )}
           </div>
-          <div className="bg-[#231f20] text-white rounded-lg p-3">
+          <div className="bg-[#276b1e] text-white rounded-lg p-3">
             <p className="font-semibold mb-1">Produk Terserap oleh Pasar</p>
             <p className="text-xs">
               Data ini menunjukkan jumlah produk yang berhasil diserap oleh
@@ -167,7 +167,7 @@ const Statistics = () => {
           data-aos-duration="2000"
           className="p-6 mt-3 bg-white rounded-xl shadow-sm"
         >
-          <p className="font-semibold">Data 2024</p>
+          <p className="font-semibold">Data 2024-2025</p>
           <div>
             {statistics.data2024.length > 0 && (
               <Chart
@@ -179,14 +179,16 @@ const Statistics = () => {
               />
             )}
           </div>
-          <div className="bg-[#231f20] text-white rounded-lg p-3">
+          <div className="bg-[#276b1e] text-white rounded-lg p-3">
             <p className="font-semibold mb-1">
               Peningkatan Pendapatan Masyarakat
             </p>
             <p className="text-xs">
               Statistik ini menunjukkan peningkatan pendapatan masyarakat
-              sepanjang tahun 2024. Menyoroti keberhasilan program-program kami
-              dalam meningkatkan ekonomi lokal dan kualitas hidup masyarakat.
+              terkhusus kelompok Wanita tani dusun indrokilo sepanjang tahun
+              2024-2025. Menyoroti keberhasilan program-program kami dalam
+              meningkatkan perekonomian lokal melalui diversfiikasi produk gula
+              aren dan berbagai pelatihan.
             </p>
           </div>
         </div>
