@@ -11,7 +11,7 @@ const Navbar = () => {
       <Link
         to={"/stats"}
         className={`rounded-full p-2 ${
-          location.pathname === "/stats" ? "bg-[#0795ff]" : "bg-[#fafafa]"
+          location.pathname === "/stats" ? "bg-[#276b1e]" : "bg-[#fafafa]"
         }`}
       >
         <svg
@@ -25,7 +25,7 @@ const Navbar = () => {
           className="w-8 h-8"
         >
           <path
-            fill={`${location.pathname === "/stats" ? "#ffffff" : "#0795ff"}`}
+            fill={`${location.pathname === "/stats" ? "#ffffff" : "#276b1e"}`}
             stroke="none"
             d="M20 13.75a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75v6.75H14V4.25c0-.728-.002-1.2-.048-1.546-.044-.325-.115-.427-.172-.484-.057-.057-.159-.128-.484-.172C12.949 2.002 12.478 2 11.75 2c-.728 0-1.2.002-1.546.048-.325.044-.427.115-.484.172-.057.057-.128.159-.172.484-.046.347-.048.818-.048 1.546V20.5H8V8.75A.75.75 0 0 0 7.25 8h-3a.75.75 0 0 0-.75.75V20.5H1.75a.75.75 0 0 0 0 1.5h20a.75.75 0 0 0 0-1.5H20v-6.75Z"
           />
@@ -35,7 +35,7 @@ const Navbar = () => {
         to={"/"}
         onClick={() => setActiveCategory("")}
         className={`${
-          location.pathname === "/" ? "bg-[#0795ff]" : "bg-[#fafafa]"
+          location.pathname === "/" ? "bg-[#276b1e]" : "bg-[#fafafa]"
         } w-fit h-fit p-2 rounded-full grid place-items-center`}
       >
         <svg
@@ -57,7 +57,7 @@ const Navbar = () => {
               fillRule="evenodd"
               clipRule="evenodd"
               d="M2.5192 7.82274C2 8.77128 2 9.91549 2 12.2039V13.725C2 17.6258 2 19.5763 3.17157 20.7881C4.34315 22 6.22876 22 10 22H14C17.7712 22 19.6569 22 20.8284 20.7881C22 19.5763 22 17.6258 22 13.725V12.2039C22 9.91549 22 8.77128 21.4808 7.82274C20.9616 6.87421 20.0131 6.28551 18.116 5.10812L16.116 3.86687C14.1106 2.62229 13.1079 2 12 2C10.8921 2 9.88939 2.62229 7.88403 3.86687L5.88403 5.10813C3.98695 6.28551 3.0384 6.87421 2.5192 7.82274ZM9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z"
-              fill={location.pathname === "/" ? "#ffffff" : "#0795ff"}
+              fill={location.pathname === "/" ? "#ffffff" : "#276b1e"}
             ></path>
           </g>
         </svg>
@@ -66,7 +66,7 @@ const Navbar = () => {
         to={"/news/berita-terkini"}
         className={`rounded-full p-2 ${
           location.pathname === "/news/berita-terkini"
-            ? "bg-[#0795ff]"
+            ? "bg-[#276b1e]"
             : "bg-[#fafafa]"
         }`}
       >
@@ -82,7 +82,7 @@ const Navbar = () => {
             fill={
               location.pathname === "/news/berita-terkini"
                 ? "#ffffff"
-                : "#0795ff"
+                : "#276b1e"
             }
             fillRule="nonzero"
             strokeWidth={0}

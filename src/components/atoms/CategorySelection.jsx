@@ -28,7 +28,7 @@ const CategorySelection = ({ category, selected }) => {
         <div className="mt-3 flex justify-between">
           <div className="flex flex-col items-center w-fit">
             <button
-              className={`w-12 h-12 bg-[#0795ff] rounded-full grid place-content-center ${
+              className={`w-12 h-12 bg-[#276b1e] rounded-full grid place-content-center ${
                 activeCategory === "Ikan Segar" ? "bg-red-600" : null
               }`}
               onClick={() => {
@@ -61,7 +61,7 @@ const CategorySelection = ({ category, selected }) => {
               }}
               className={`w-12 h-12 ${
                 activeCategory === "Produk Olahan" ? "bg-red-600" : null
-              } bg-[#0795ff] rounded-full grid place-content-center`}
+              } bg-[#276b1e] rounded-full grid place-content-center`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ const CategorySelection = ({ category, selected }) => {
               }}
               className={`w-12 h-12 ${
                 activeCategory === "Rumput Laut" ? "bg-red-600" : null
-              } bg-[#0795ff] rounded-full grid place-content-center`}
+              } bg-[#276b1e] rounded-full grid place-content-center`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +120,7 @@ const CategorySelection = ({ category, selected }) => {
               }}
               className={`w-12 h-12 ${
                 activeCategory === "Kopi" ? "bg-red-600" : null
-              } bg-[#0795ff] rounded-full grid place-content-center`}
+              } bg-[#276b1e] rounded-full grid place-content-center`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -138,56 +138,6 @@ const CategorySelection = ({ category, selected }) => {
               </svg>
             </button>
             <p className="text-xs mt-2 text-center">Kopi</p>
-          </div>
-          <div
-            className="flex flex-col items-center w-fit"
-            onClick={() => setIsVisible(!isVisible)}
-          >
-            <button
-              className={`w-12 h-12 ${
-                otherSelected ? "bg-red-600" : "bg-[#0795ff]"
-              } rounded-full grid place-content-center`}
-            >
-              <svg
-                width="64px"
-                height="64px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-11 h-11"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <circle
-                    cx="18"
-                    cy="12"
-                    r="1.5"
-                    transform="rotate(90 18 12)"
-                    fill="#ffffff"
-                  ></circle>{" "}
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="1.5"
-                    transform="rotate(90 12 12)"
-                    fill="#ffffff"
-                  ></circle>{" "}
-                  <circle
-                    cx="6"
-                    cy="12"
-                    r="1.5"
-                    transform="rotate(90 6 12)"
-                    fill="#ffffff"
-                  ></circle>
-                </g>
-              </svg>
-            </button>
-            <p className="text-xs mt-2 text-center">Lainnya</p>
           </div>
         </div>
       </div>

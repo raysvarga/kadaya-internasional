@@ -1,6 +1,6 @@
 import React from "react";
 import SearchBar from "../atoms/SearchBar";
-import logoTxt from "../../assets/img/logoTxt.png";
+import logoTxt from "../../assets/img/ld-kadaya.png";
 import { Link, useMatch } from "react-router-dom";
 
 const Header = () => {
