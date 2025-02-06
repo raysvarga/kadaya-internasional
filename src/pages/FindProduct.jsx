@@ -119,8 +119,8 @@ const FindProduct = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <div className="mx-5">
-        <div className="-mx-5">
+      <div className="mx-5 pb-20">
+        <div className="-mx-5 ">
           <Header />
         </div>
         <div className="mt-5">
